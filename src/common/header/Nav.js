@@ -10,7 +10,7 @@ const Nav = () => {
                 <li className="menu-item-has-children">
                     <Link to="#">Player <FaAngleDown /> </Link>
                     <ul className="axil-submenu">
-                        <li><Link to={process.env.PUBLIC_URL + "/digital-agency"}>Digital Agency</Link></li>
+                        <li><Link to={process.env.PUBLIC_URL + "/digital-agency"}>D</Link></li>
                         <li><Link to={process.env.PUBLIC_URL + "/creative-agency"}>Creative Agency</Link></li>
                         <li><Link to={process.env.PUBLIC_URL + "/personal-portfolio"}>Personal Portfolio</Link></li>
                         <li><Link to={process.env.PUBLIC_URL + "/home-startup"}>Home Startup</Link></li>
