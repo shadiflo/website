@@ -14,4 +14,4 @@ jobs:
         server: ssh.cluster027.hosting.ovh.net
         username: ${{ secrets.OVH_HOSTING_USER }}
         password: ${{ secrets.OVH_HOSTING_PASSWORD }}
-        server-dir: /build/clanbase.ovh/
+       
