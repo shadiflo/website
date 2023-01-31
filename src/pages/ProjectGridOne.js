@@ -12,7 +12,7 @@ const ProjectGridOne = () => {
 
     return (
         <>
-        <SEO title="Project Two Column" />
+        <SEO title="Connect" />
         <ColorSwitcher />
         <main className="main-wrapper">
             <HeaderOne />

@@ -17,7 +17,7 @@ const Splash = () => {
 
     return (
         <>
-        <SEO title="Digital Creative Agency, Corporate and Portfolio React JS Template" />
+        <SEO title="Home" />
         <ColorSwitcher />
             <main className="main-wrapper">
                 <SplashHeader />
@@ -35,24 +35,7 @@ const Splash = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="row">
-                            {
-                                DemoData.map((data) => (
-                                <div className="col-md-6" key={data.id}>
-                                    <div className="single-demo">
-                                        <Link to={`${process.env.PUBLIC_URL}/${slugify(data.title)}`}>
-                                            <span className="thumb">
-                                                <img src={`${process.env.PUBLIC_URL}${data.height_img}`} alt={data.title} />
-                                            </span>
-                                            <h4 className="title">{data.title}</h4>
-                                        </Link>
-                                        
-                                    </div>
-                                </div>
-                                ))
-                            }
-
-                        </div>
+                        
                     </div>
                     <ul className="shape-group list-unstyled">
                         <li className="shape-1"><img src={process.env.PUBLIC_URL + "/images/others/bubble-35.png"} alt="Shape" /></li>
