@@ -1,0 +1,8 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /
+    RewriteCond %{HTTP_HOST} !^clanbase\.ovh$ [NC,OR]
+    RewriteCond %{HTTPS} =off
+    RewriteRule ^(.*)$ https://clanbase.ovh/$1 [R=301,L]
+</IfModule>
+Options -Indexes
