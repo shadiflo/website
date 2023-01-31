@@ -4,14 +4,5 @@ RewriteEngine on
 RewriteCond %{HTTP_HOST} ^clanbase.ovh[nc]
 RewriteRule ^(.*)$ http://www.clanbase.ovh/$1 [r=301,nc]
 
-//301 Redirect Entire Directory
-RedirectMatch 301 /www(.*) /build/$1
-
-//Caching schema
-<FilesMatch "\.(jpg|css|png|js)$">
-Header set Cache-Control "public, max-age=0"
-</FilesMatch>
-
 //Change default directory page
 DirectoryIndex index.html
- 
