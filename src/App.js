@@ -31,7 +31,6 @@ import ProjectGridFour from './pages/ProjectGridFour';
 import ProjectDetails from './pages/ProjectDetails';
 
 // Pages 
-import Splash from './pages/Splash';
 import AboutUs from './pages/AboutUs';
 import OurOffice from './pages/OurOffice';
 import OurClients from './pages/OurClients';

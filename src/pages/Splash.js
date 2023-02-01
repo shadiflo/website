@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+
 import SplashFooter from '../common/footer/SplashFooter';
 import SplashHeader from '../common/header/SplashHeader';
 import SEO from '../common/SEO';
@@ -7,10 +7,10 @@ import SplashBanner from '../component/banner/SplashBanner';
 import SplashCta from '../component/cta/SplashCta';
 import ColorSwitcher from '../elements/switcher/ColorSwitcher';
 import SplashData from '../data/splash/SplashData.json';
-import { slugify } from '../utils';
+
 import { FaAngleRight } from "react-icons/fa";
 
-const DemoData = SplashData[0];
+
 const FeatureData = SplashData[1];
 
 const Splash = () => {

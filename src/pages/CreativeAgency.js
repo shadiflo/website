@@ -4,12 +4,7 @@ import HeaderTwo from '../common/header/HeaderTwo';
 import SEO from '../common/SEO';
 import BannerTwo from '../component/banner/BannerTwo';
 import BlogOne from '../component/blog/BlogOne';
-import BrandOne from '../component/brand/BrandOne';
-import CounterUpOne from '../component/counterup/CounterUpOne';
-import CtaLayoutOne from '../component/cta/CtaLayoutOne';
-import ProjectOne from '../component/project/ProjectOne';
 
-import TestimonialOne from '../component/testimonial/TestimonialOne';
 
 import ColorSwitcher from '../elements/switcher/ColorSwitcher';
 
