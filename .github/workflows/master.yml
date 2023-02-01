@@ -2,7 +2,7 @@ on: push
 name: Publish Website
 jobs:
   web-deploy:
-    name: 🚀 Deploy Website Every Commit
+    name: 🚀 🎉 Deploy
     runs-on: ubuntu-latest
     steps:
     - name: 🚚 Get Latest Code
@@ -13,7 +13,7 @@ jobs:
       with:
         node-version: 16
         cache: "npm"
-    - run: npm ci
+    - run: npm i
       
     - name: 🔨 Build
       run: npm run build
