@@ -1,8 +1,17 @@
-<IfModule mod_rewrite.c>
-    RewriteEngine On
-    RewriteBase /
-    RewriteCond %{HTTP_HOST} !^clanbase\.ovh$ [NC,OR]
-    RewriteCond %{HTTPS} =off
-    RewriteRule ^(.*)$ https://clanbase.ovh/$1 [R=301,L]
-</IfModule>
-Options -Indexes
+//Rewrite to www
+Options +FollowSymLinks
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^clanbase.ovh[nc]
+RewriteRule ^(.*)$ http://www.clanbase.ovh/$1 [r=301,nc]
+
+//301 Redirect Entire Directory
+RedirectMatch 301 /www(.*) /build/$1
+
+//Caching schema
+<FilesMatch "\.(jpg|css|png|js)$">
+Header set Cache-Control "public, max-age=0"
+</FilesMatch>
+
+//Change default directory page
+DirectoryIndex /www/build/index.html
+ 
