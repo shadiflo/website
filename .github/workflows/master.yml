@@ -1,27 +1,16 @@
 on: push
-name: Publish Website
+name: 🚀 Deploy website on push
 jobs:
   web-deploy:
-    name: 🚀 Deploy Website Every Commit
+    name: 🎉 Deploy
     runs-on: ubuntu-latest
     steps:
-    - name: 🚚 Get Latest Code
+    - name: 🚚 Get latest code
       uses: actions/checkout@v3
-
-    - name: 📦 Install Packages
-    - uses: actions/setup-node@v3
-      with:
-        node-version: 18
-        cache: "npm"
-    - run: npm ci
-      
-    - name: 🔨 Build
-      run: npm run build
     
-    - name: 📂 Sync Files
-      uses: SamKirkland/web-deploy@v1
+    - name: 📂 Sync files
+      uses: SamKirkland/FTP-Deploy-Action@4.3.3
       with:
-        target-server: ssh.cluster027.hosting.ovh.net
-        remote-user: clanbap
-        private-ssh-key: ${{ secrets.OVH_HOSTING_PASSWORD }}
-        destination-path: ~/home/clanbap/
+        server: ftp.cluster027.hosting.ovh.net
+        username: clanbap
+        password: ${{ secrets.OVH_HOSTING_PASSWORD }}
