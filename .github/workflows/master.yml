@@ -1,19 +1,18 @@
-on: push
-name: 🚀 Deploy website on push
+on: [push]
+
 jobs:
-  web-deploy:
-    name: 🎉 Deploy
+  deploy:
     runs-on: ubuntu-latest
+    name: Deploy my nice code
     steps:
-    - name: 🚚 Get latest code
-      uses: actions/checkout@v3
-    
-    - name: 📂 Sync files
-      uses: SamKirkland/FTP-Deploy-Action@4.3.3
-      with:
-        server: ssh.cluster027.hosting.ovh.net
-        username: ${{ secrets.OVH_HOSTING_USER }}
-        password: $${{ secrets.SSH_PASSWORD }}
+    - name: Deploy to OVH hosting
+      uses: pitscher/ovh-deploy-hosting-action@v1
+      env:
+        OVH_HOSTING_USER: ${{ secrets.SSH_USER }}
+        OVH_HOSTING_PASSWORD: ${{ secrets.SSH_PASSWORD}}
+        OVH_HOSTING_DOMAIN: ssh.cluster027.hosting.ovh.net
+        REPOSITORY_NAME: website
+        REPOSITORY_URL: https://github.com/shadiflo/website
   
         exclude: |
           **/.git*
