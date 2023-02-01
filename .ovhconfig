@@ -1,0 +1,10 @@
+; more infos on this file can be found here :
+; https://docs.ovh.com/it/hosting/attiva_lottimizzazione_php_sul_tuo_hosting_condiviso_ovh/
+
+app.engine=php
+app.engine.version=7.4
+
+http.firewall=none
+environment=production
+
+container.image=stable64

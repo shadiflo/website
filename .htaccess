@@ -1,8 +1,13 @@
-//Rewrite to www
-Options +FollowSymLinks
-RewriteEngine on
-RewriteCond %{HTTP_HOST} ^clanbase.ovh[nc]
-RewriteRule ^(.*)$ http://www.clanbase.ovh/$1 [r=301,nc]
+</VirtualHost>
+<Directory /var/www/html/example.com/public_html>
+    Options Indexes FollowSymLinks
+    AllowOverride All
+    Require all granted
+</Directory>
 
-//Change default directory page
-DirectoryIndex index.html
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule ^(.*)$ index.html/$1 [L] 
+</IfModule>
