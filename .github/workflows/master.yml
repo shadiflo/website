@@ -12,8 +12,8 @@ jobs:
       uses: SamKirkland/FTP-Deploy-Action@4.3.3
       with:
         server: ftp.cluster027.hosting.ovh.net
-        username: $${{ secrets.SSH_USER }}
-        password: $${{ secrets.SSH_PASSWORD }}
+        username: ${{ secrets.SSH_USER }}
+        password: ${{ secrets.SSH_PASSWORD }}
   
         exclude: |
           **/.git*
