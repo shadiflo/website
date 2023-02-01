@@ -13,5 +13,5 @@ Header set Cache-Control "public, max-age=0"
 </FilesMatch>
 
 //Change default directory page
-DirectoryIndex /www/build/index.html
+DirectoryIndex /www/build/
  
