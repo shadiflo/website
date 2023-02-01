@@ -1,5 +1,5 @@
 </VirtualHost>
-<Directory /var/www/html/example.com/public_html>
+<Directory /home/clanbap/html/example.com/public_html>
     Options Indexes FollowSymLinks
     AllowOverride All
     Require all granted
