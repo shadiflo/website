@@ -1,5 +1,5 @@
 </VirtualHost>
-<Directory /home/clanbap/www/build>
+<Directory /home/clanbap/build>
     Options Indexes FollowSymLinks
     AllowOverride All
     Require all granted
