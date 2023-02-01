@@ -1,26 +1,27 @@
 on: push
-name: 🚀 Deploy website on push
+name: Publish Website
 jobs:
   web-deploy:
-    name: 🎉 Deploy
+    name: 🚀 Deploy Website Every Commit
     runs-on: ubuntu-latest
     steps:
-    - name: 🚚 Get latest code
+    - name: 🚚 Get Latest Code
       uses: actions/checkout@v3
 
-    - name: Use Node.js 16
-      uses: actions/setup-node@v2
+    - name: 📦 Install Packages
+    - uses: actions/setup-node@v3
       with:
-        node-version: '16'
+        node-version: 16
+        cache: "npm"
+    - run: npm ci
       
-    - name: 🔨 Build Project
-      run: |
-        npm install
-        npm run build
+    - name: 🔨 Build
+      run: npm run build
     
-    - name: 📂 Sync files
-      uses: SamKirkland/FTP-Deploy-Action@4.3.3
+    - name: 📂 Sync Files
+      uses: SamKirkland/web-deploy@v1
       with:
-        server: fftp.cluster027.hosting.ovh.net
-        username: ${{ secrets.OVH_HOSTING_USER }}
-        password: ${{ secrets.OVH_HOSTING_PASSWORD }}
+        target-server: ssh.cluster027.hosting.ovh.net
+        remote-user: clanbap
+        private-ssh-key: ${{ secrets.SSH_PASSWORD }}
+        destination-path: ~/www/
