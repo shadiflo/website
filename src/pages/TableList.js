@@ -8,6 +8,7 @@ const TableList = () => {
     <div className="home"></div>
     <div className="container">
       <div className="active-player">
+         
         <h1 className="text-center">Free Agents</h1>
       </div>
       <table class="table mt-5">

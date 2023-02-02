@@ -12,17 +12,12 @@ const BannerThree = () => {
                 <div className="col-lg-6">
                     <div className="banner-content">
                         <AnimationOnScroll  animateIn="slideInUp" duration={1} animateOnce={true} delay={100}>
-                            <span className="subtitle">JOHNATHAN SMITH</span>
+                            <span className="subtitle">Florin 'shadi' Stefanescu</span>
                         </AnimationOnScroll>
                         <AnimationOnScroll  animateIn="slideInUp" duration={1} animateOnce={true} delay={200}>
-                            <h1 className="title">UI/UX ineraction designer</h1>
+                            <h1 className="title">Faceit Visuals Extension</h1>
                         </AnimationOnScroll>
-                        <AnimationOnScroll  animateIn="slideInUp" duration={1} animateOnce={true} delay={200}>
-                        <div className="btn-group">
-                            <a href="https://dribbble.com/axilweb/" className="axil-btn btn-fill-primary btn-large">Latest Work On Dribbble</a>
-                            <Link to={process.env.PUBLIC_URL + "/about-us"} className="about-btn">About Me</Link>
-                        </div>
-                        </AnimationOnScroll>
+                       
                     </div>
                 </div>
                 <div className="col-lg-6">
@@ -30,7 +25,12 @@ const BannerThree = () => {
                     <div className="large-thumb">
                         <AnimationOnScroll  animateIn="slideInUp" duration={1} animateOnce={true} delay={200}>
                             <Tilty perspective={2000} reset={false}>
-                                <img src={process.env.PUBLIC_URL + "/images/banner/banner-thumb-6.png"} alt="Shape" />
+                                <img src={process.env.PUBLIC_URL + "/images/banner/fvisuals1.png"} alt="Shape" />
+                            </Tilty>
+                        </AnimationOnScroll>
+                        <AnimationOnScroll  animateIn="slideInUp" duration={1} animateOnce={true} delay={200}>
+                            <Tilty perspective={2000} reset={false}>
+                                <img src={process.env.PUBLIC_URL + "/images/banner/fvisuals2.png"} alt="Shape" />
                             </Tilty>
                         </AnimationOnScroll>
                     </div>
