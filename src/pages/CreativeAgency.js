@@ -3,10 +3,10 @@ import FooterOne from '../common/footer/FooterOne';
 import HeaderTwo from '../common/header/HeaderTwo';
 import SEO from '../common/SEO';
 import BannerTwo from '../component/banner/BannerTwo';
-import BlogOne from '../component/blog/BlogOne';
 
 
-import ColorSwitcher from '../elements/switcher/ColorSwitcher';
+
+
 
 
 const CreativeAgency = () => {
@@ -14,7 +14,7 @@ const CreativeAgency = () => {
     return (
         <>
         <SEO title="Home"/>
-        <ColorSwitcher />
+       
         <main className="main-wrapper">
             <HeaderTwo />
             <BannerTwo />
