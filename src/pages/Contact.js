@@ -27,7 +27,7 @@ const Contact = () => {
                     <div className="row">
                         <div className="col-xl-5 col-lg-6">
                             <div className="contact-form-box shadow-box mb--30">
-                                <h3 className="title">Get a free Abstrak quote now</h3>
+                                <h3 className="title">Apply now!</h3>
                                 <FormTwo />
                             </div>
                         </div>
@@ -52,24 +52,7 @@ const Contact = () => {
                 </ul>
             </div>
 
-            <div className="section section-padding bg-color-dark overflow-hidden">
-                <div className="container">
-                    <SectionTitle 
-                        subtitle="Find Us"
-                        title="Our office"
-                        description=""
-                        textAlignment="heading-light-left"
-                        textColor=""
-                    />
-                    <div className="row">
-                        <ContactLocation />
-                    </div>
-                </div>
-                <ul className="shape-group-11 list-unstyled">
-                    <li className="shape shape-1"><img src={process.env.PUBLIC_URL + "/images/others/line-6.png"} alt="line" /></li>
-                    <li className="shape shape-2"><img src={process.env.PUBLIC_URL + "/images/others/circle-3.png"} alt="line" /></li>
-                </ul>
-            </div>
+     
 
             <FooterOne parentClass="pt--150 pt_lg--100 pt_md--80 pt_sm--60" />
             </main>

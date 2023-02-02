@@ -6,10 +6,11 @@ import ColorSwitcher from '../elements/switcher/ColorSwitcher';
 import SEO from '../common/SEO';
 import CtaLayoutOne from '../component/cta/CtaLayoutOne';
 import ProjectOne from '../component/project/ProjectOne';
-
+import TableList from './TableList'
 
 const ProjectGridOne = () => {
-
+    
+   
     return (
         <>
         <SEO title="Connect" />
@@ -18,12 +19,10 @@ const ProjectGridOne = () => {
             <HeaderOne />
             <BcrumbBannerOne 
                 title="Our Projects"
-                paragraph ="A quick view of industry specific problems solved with design by the awesome team at Abstrak.
-                "
-                styleClass=""
-                mainThumb="/images/banner/banner-thumb-1.png"
+               
             />
-            <ProjectOne />
+          <TableList/>
+           
             <CtaLayoutOne />
             <FooterOne parentClass="" />
         </main>

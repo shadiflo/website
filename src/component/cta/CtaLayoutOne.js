@@ -11,9 +11,9 @@ const CtaLayoutOne = () => {
                 <div className="call-to-action">
                     <div className="section-heading heading-light">
                         <span className="subtitle">Let's Work Together</span>
-                        <h2 className="title">Need a successful project?</h2>
+                        <h2 className="title">Need a successful Team?</h2>
                         <Link to={process.env.PUBLIC_URL + "/contact"} className="axil-btn btn-large btn-fill-white">
-                            Estimate Project
+                            Create an Application Form
                         </Link>
                     </div>
                     <div className="thumbnail">

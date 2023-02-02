@@ -45,8 +45,12 @@ const FormTwo = () => {
             <input type="email" className="form-control" name="contact-email" required />
         </div>
         <div className="form-group">
-            <label>Phone</label>
-            <input type="tel" className="form-control" name="contact-phone" required />
+            <label>HLTV</label>
+            <input type="hltv" className="form-control" name="contact-hltv" required />
+        </div>
+        <div className="form-group">
+            <label>FACEIT</label>
+            <input type="faceit" className="form-control" name="contact-faceit" required />
         </div>
         <div className="form-group mb--40">
             <label>How can we help you?</label>
