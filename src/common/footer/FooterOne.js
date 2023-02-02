@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { FaFacebookF, FaTwitter, FaPinterestP, FaLinkedin, FaInstagram, FaVimeoV, FaDribbble, FaBehance, FaEnvelopeOpen } from "react-icons/fa";
 import ServiceData from "../../data/service/ServiceMain.json";
 import { slugify } from '../../utils';
-
+import {  SiFaceit  } from "react-icons/si";
 const getServiceData = ServiceData;
 
 const FooterOne = ({parentClass}) => {
@@ -14,14 +14,9 @@ const FooterOne = ({parentClass}) => {
                 <div className="footer-top">
                     <div className="footer-social-link">
                         <ul className="list-unstyled">
-                            <li><Link to="https://facebook.com/"><FaFacebookF /></Link></li>
-                            <li><Link to="https://twitter.com/"><FaTwitter /></Link></li>
-                            <li><Link to="https://www.pinterest.com/"><FaPinterestP /></Link></li>
-                            <li><Link to="https://www.linkedin.com/"><FaLinkedin /></Link></li>
-                            <li><Link to="https://www.instagram.com/"><FaInstagram /></Link></li>
-                            <li><Link to="https://vimeo.com/"><FaVimeoV /></Link></li>
-                            <li><Link to="https://dribbble.com/"><FaDribbble /></Link></li>
-                            <li><Link to="https://www.behance.net/"><FaBehance /></Link></li>
+                            <li><Link to="https://www.faceit.com/en/organizers/e9891e09-318b-4309-babd-f4c87c4fbbb5/ClanBase/" target="_blank" rel="noopener noreferrer"><SiFaceit />Faceit</Link></li>
+                            <li><a href="https://www.faceit.com/en/inv/o24rI8V"target="_blank" rel="noopener noreferrer"><SiFaceit /> Join Clan </a></li>
+                       
                         </ul>
                     </div>
                 </div>

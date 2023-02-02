@@ -35,7 +35,7 @@ const CreativeAgency = () => {
           
           
            
-            <BlogOne />
+          
            
             <FooterOne parentClass="" />
         </main>

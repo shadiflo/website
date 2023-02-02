@@ -10,6 +10,7 @@ import CreativeAgency from './pages/CreativeAgency';
 import PersonalPortfolio from './pages/FaceitVisuals';
 import HomeStartup from './pages/HomeStartup';
 import CorporateAgency from './pages/CorporateAgency';
+import FaceitHubs from './pages/FaceitHubs';
 
 // Blog Import
 import BlogGridView from './pages/BlogGrid';
@@ -51,6 +52,7 @@ import TermsOfUse from './pages/TermsOfUse';
 import './assets/scss/app.scss';
 
 
+
 const App = () => {
   return (
     <Router>
@@ -58,7 +60,7 @@ const App = () => {
 			<Routes>
 				<Route path={process.env.PUBLIC_URL + "/"} element={<CreativeAgency />}/>
 
-				<Route path={process.env.PUBLIC_URL + "/digital-agency"} element={<DigitalAgency />}/>
+				<Route path={process.env.PUBLIC_URL + "/faceithubs"} element={<FaceitHubs />}/>
 				<Route path={process.env.PUBLIC_URL + "/creative-agency"} element={<CreativeAgency />}/>
 				<Route path={process.env.PUBLIC_URL + "/faceitvisuals"} element={<PersonalPortfolio />}/>
 				<Route path={process.env.PUBLIC_URL + "/home-startup"} element={<HomeStartup />}/>
