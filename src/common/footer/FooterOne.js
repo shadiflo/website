@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { FaFacebookF, FaTwitter, FaPinterestP, FaLinkedin, FaInstagram, FaVimeoV, FaDribbble, FaBehance, FaEnvelopeOpen } from "react-icons/fa";
+import { FaGooglePlay, FaTwitter,  FaEnvelopeOpen } from "react-icons/fa";
 import ServiceData from "../../data/service/ServiceMain.json";
 import { slugify } from '../../utils';
 import {  SiFaceit  } from "react-icons/si";
@@ -14,9 +14,8 @@ const FooterOne = ({parentClass}) => {
                 <div className="footer-top">
                     <div className="footer-social-link">
                         <ul className="list-unstyled">
-                            <li><Link to="https://www.faceit.com/en/organizers/e9891e09-318b-4309-babd-f4c87c4fbbb5/ClanBase/" target="_blank" rel="noopener noreferrer"><SiFaceit />Faceit</Link></li>
-                            <li><a href="https://www.faceit.com/en/inv/o24rI8V"target="_blank" rel="noopener noreferrer"><SiFaceit /> Join Clan </a></li>
                        
+                                            <li><a href="https://www.faceit.com/en/organizers/e9891e09-318b-4309-babd-f4c87c4fbbb5/ClanBase"target="_blank" rel="noopener noreferrer"><SiFaceit />  </a></li>
                         </ul>
                     </div>
                 </div>
@@ -40,7 +39,7 @@ const FooterOne = ({parentClass}) => {
                         <div className="col-xl-6 col-lg-7">
                             <div className="row">
                                 <div className="col-sm-6">
-                                    <div className="footer-widget">
+                                  {/*  <div className="footer-widget">
                                         <h6 className="widget-title">Services</h6>
                                         <div className="footer-menu-link">
                                             <ul className="list-unstyled">
@@ -52,7 +51,9 @@ const FooterOne = ({parentClass}) => {
                                             </ul>
                                         </div>
                                     </div>
+                                    */}
                                 </div>
+                                {/* 
                                 <div className="col-sm-3">
                                     <div className="footer-widget">
                                         <h6 className="widget-title">Resourses</h6>
@@ -65,6 +66,7 @@ const FooterOne = ({parentClass}) => {
                                         </div>
                                     </div>
                                 </div>
+                                */}
                                 <div className="col-sm-3">
                                     <div className="footer-widget">
                                         <h6 className="widget-title">Support</h6>
@@ -97,7 +99,10 @@ const FooterOne = ({parentClass}) => {
                             </div>
                         </div>
                     </div>
+
                 </div>
+                
+                
             </div>
         </footer>
     )

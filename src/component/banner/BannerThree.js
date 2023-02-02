@@ -12,7 +12,7 @@ const BannerThree = () => {
                 <div className="col-lg-6">
                     <div className="banner-content">
                         <AnimationOnScroll  animateIn="slideInUp" duration={1} animateOnce={true} delay={100}>
-                            <span className="subtitle">Florin 'shadi' Stefanescu</span>
+                            <span className="subtitle">'shadi' </span>
                         </AnimationOnScroll>
                         <AnimationOnScroll  animateIn="slideInUp" duration={1} animateOnce={true} delay={200}>
                             <h1 className="title">Faceit Visuals Extension</h1>
@@ -28,9 +28,17 @@ const BannerThree = () => {
                                 <img src={process.env.PUBLIC_URL + "/images/banner/fvisuals1.png"} alt="Shape" />
                             </Tilty>
                         </AnimationOnScroll>
+                        
                         <AnimationOnScroll  animateIn="slideInUp" duration={1} animateOnce={true} delay={200}>
                             <Tilty perspective={2000} reset={false}>
                                 <img src={process.env.PUBLIC_URL + "/images/banner/fvisuals2.png"} alt="Shape" />
+                            </Tilty>
+                        </AnimationOnScroll>
+                        <AnimationOnScroll  animateIn="slideInUp" duration={1} animateOnce={true} delay={200}>
+                            <Tilty perspective={2000} reset={false}>
+                            
+                            <h1 className="title"> Steam Profiles</h1>
+                                <img src={process.env.PUBLIC_URL + "/images/banner/fvisuals3.png"} alt="Shape" />
                             </Tilty>
                         </AnimationOnScroll>
                     </div>
