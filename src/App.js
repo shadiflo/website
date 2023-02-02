@@ -7,7 +7,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 // Home Pages Import
 import DigitalAgency from './pages/DigitalAgency';
 import CreativeAgency from './pages/CreativeAgency';
-import PersonalPortfolio from './pages/PersonalPortfolio';
+import PersonalPortfolio from './pages/FaceitVisuals';
 import HomeStartup from './pages/HomeStartup';
 import CorporateAgency from './pages/CorporateAgency';
 
@@ -60,7 +60,7 @@ const App = () => {
 
 				<Route path={process.env.PUBLIC_URL + "/digital-agency"} element={<DigitalAgency />}/>
 				<Route path={process.env.PUBLIC_URL + "/creative-agency"} element={<CreativeAgency />}/>
-				<Route path={process.env.PUBLIC_URL + "/personal-portfolio"} element={<PersonalPortfolio />}/>
+				<Route path={process.env.PUBLIC_URL + "/faceitvisuals"} element={<PersonalPortfolio />}/>
 				<Route path={process.env.PUBLIC_URL + "/home-startup"} element={<HomeStartup />}/>
 				<Route path={process.env.PUBLIC_URL + "/corporate-agency"} element={<CorporateAgency />}/>
 
