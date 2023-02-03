@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import HeaderOne from '../common/header/HeaderOne';
 import SEO from '../common/SEO';
-import ColorSwitcher from '../elements/switcher/ColorSwitcher';
 import { AnimationOnScroll } from 'react-animation-on-scroll';
 
 const ErrorPage = () => {
@@ -10,7 +9,7 @@ const ErrorPage = () => {
     return (
         <>
         <SEO title="404 Not Found" />
-        <ColorSwitcher />
+       
             <main className="main-wrapper">
                 <HeaderOne />
                 <div className="error-page onepage-screen-area">

@@ -1,10 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { FaGooglePlay, FaTwitter,  FaEnvelopeOpen } from "react-icons/fa";
-import ServiceData from "../../data/service/ServiceMain.json";
-import { slugify } from '../../utils';
+import {   FaEnvelopeOpen } from "react-icons/fa";
+
 import {  SiFaceit  } from "react-icons/si";
-const getServiceData = ServiceData;
+
 
 const FooterOne = ({parentClass}) => {
     
@@ -15,7 +14,7 @@ const FooterOne = ({parentClass}) => {
                     <div className="footer-social-link">
                         <ul className="list-unstyled">
                        
-                                            <li><a href="https://www.faceit.com/en/organizers/e9891e09-318b-4309-babd-f4c87c4fbbb5/ClanBase"target="_blank" rel="noopener noreferrer"><SiFaceit />  </a></li>
+                         <li><a href="https://www.faceit.com/en/organizers/e9891e09-318b-4309-babd-f4c87c4fbbb5/ClanBase"target="_blank" rel="noopener noreferrer"><SiFaceit />  </a></li>
                         </ul>
                     </div>
                 </div>
@@ -25,7 +24,7 @@ const FooterOne = ({parentClass}) => {
                             <div className="footer-widget border-end">
                                 <div className="footer-newsletter">
                                     <h2 className="title">Get in touch!</h2>
-                                    <p>Fusce varius, dolor tempor interdum tristique, dui urna bib endum magna, ut ullamcorper purus</p>
+                                    <p>Hear News,updates from us. Keep yourself updated!</p>
                                     <form>
                                         <div className="input-group">
                                             <span className="mail-icon"><FaEnvelopeOpen /> </span>

@@ -23,6 +23,7 @@ const Nav = () => {
                         <li><Link to={process.env.PUBLIC_URL + "/service-one"}>Service</Link></li>
                         <li><Link to={process.env.PUBLIC_URL + "/service-two"}>Service Two</Link></li>
                         <li><Link to={process.env.PUBLIC_URL + "/service-details/design"}>Service Details</Link></li>
+                        <li><Link to={process.env.PUBLIC_URL + "/404"}>404 Page</Link></li>
                     </ul>
                 </li>
                 <li className="menu-item-has-children">
@@ -53,7 +54,7 @@ const Nav = () => {
                         <li><Link to={process.env.PUBLIC_URL + "/testimonials"}>Testimonial</Link></li>
                         <li><Link to={process.env.PUBLIC_URL + "/pricing-table"}>Pricing Table</Link></li>
                         <li><Link to={process.env.PUBLIC_URL + "/typography"}>Typography</Link></li>
-                        <li><Link to={process.env.PUBLIC_URL + "/404"}>404 Page</Link></li>
+                        
                         <li><Link to={process.env.PUBLIC_URL + "/coming-soon"}>Coming Soon</Link></li>
                     </ul>
                     */}
