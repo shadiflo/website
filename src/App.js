@@ -50,7 +50,8 @@ import TermsOfUse from './pages/TermsOfUse';
 
 // Css Import
 import './assets/scss/app.scss';
-
+// New pages
+import ApplicationForm from './pages/Applicationform'
 
 
 const App = () => {
@@ -87,6 +88,7 @@ const App = () => {
 
 				{/* Pages  */}
 				<Route path={process.env.PUBLIC_URL + "/about-us"} element={<AboutUs />}/>
+				<Route path={process.env.PUBLIC_URL + "/applicationform"} element={<ApplicationForm/>}/>
 				<Route path={process.env.PUBLIC_URL + "/our-office"} element={<OurOffice />}/>
 				<Route path={process.env.PUBLIC_URL + "/our-clients"} element={<OurClients />}/>
 				<Route path={process.env.PUBLIC_URL + "/team"} element={<Team />}/>
