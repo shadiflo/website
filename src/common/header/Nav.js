@@ -9,13 +9,13 @@ const Nav = () => {
             <ul className="mainmenu">
                 <li className="menu-item-has-children">
                 <Link to="#">ClanBase <FaAngleDown /></Link>
-                    {/*<ul className="axil-submenu">
+                    <ul className="axil-submenu">
                         <li><Link to={process.env.PUBLIC_URL + "/faceithubs"}>Faceit Hubs</Link></li>
                         <li><Link to={process.env.PUBLIC_URL + "/faceitvisuals"}>Faceit Extension</Link></li>
                         <li><Link to={process.env.PUBLIC_URL + "/home-startup"}>Home Startup</Link></li>
                         <li><Link to={process.env.PUBLIC_URL + "/corporate-agency"}>Corporate Agency</Link></li>
                         <li><a href="https://new.axilthemes.com/demo/react/abstrak-rtl/">RTL Demo</a></li>
-                    </ul>*/}
+                    </ul>
                 </li>
                 <li className="menu-item-has-children">
                     <Link to="#">Services <FaAngleDown /></Link>
