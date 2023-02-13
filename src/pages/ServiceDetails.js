@@ -33,36 +33,10 @@ const ServiceDetails = () => {
         <main className="main-wrapper">
             <HeaderOne />
             <BcrumbBannerOne 
-            title={detailsService.title}
-            paragraph ={detailsService.description}
-            styleClass=""
-            mainThumb="/images/banner/banner-thumb-4.png"
-            />
+           />
             <AboutTwo />
            
-            <ProcessOne />
-            <div className="section section-padding">
-                <div className="container">
-                    <SectionTitle 
-                        subtitle="Our Project"
-                        title="Featured Designs"
-                        description=""
-                        textAlignment=""
-                        textColor=""
-                    />
-                    <div className="row row-35">
-                        {getProjectData.slice(0, 2).map((data) => (
-                            <div className="col-md-6" key={data.id}>
-                                <ProjectPropOne projectStyle="" portfolio={data}/>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-                <ul className="shape-group-16 list-unstyled">
-                    <li className="shape shape-1"><img src={process.env.PUBLIC_URL + "/images/others/circle-2.png"} alt="circle" /></li>
-                    <li className="shape shape-3"><img src={process.env.PUBLIC_URL + "/images/others/bubble-1.png"} alt="Line" /></li>
-                </ul>
-            </div>
+          
             <CtaLayoutOne />
         <FooterOne parentClass="" />
         </main>

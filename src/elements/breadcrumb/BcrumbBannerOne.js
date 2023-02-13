@@ -11,7 +11,7 @@ const BcrumbBannerOne = ({title, paragraph, styleClass, mainThumb}) => {
                 </div>
                 <div className={`banner-thumbnail ${styleClass}`}>
                     <Tilty perspective={2000} reset={false}>
-                        <img src={process.env.PUBLIC_URL + mainThumb} alt="Illustration" />
+                      
                     </Tilty>
                 </div>
             </div>

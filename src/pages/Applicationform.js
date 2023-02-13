@@ -1,6 +1,5 @@
 import React from 'react';
 import SEO from '../common/SEO';
-import ColorSwitcher from '../elements/switcher/ColorSwitcher';
 import FooterOne from '../common/footer/FooterOne';
 import HeaderOne from '../common/header/HeaderOne';
 import BreadCrumbOne from '../elements/breadcrumb/BreadCrumbOne';
@@ -12,8 +11,8 @@ import FormTwo from '../component/contact/FormTwo';
 const Contact = () => {
     return (
         <>
-            <SEO title="Application Form" />
-            <ColorSwitcher />
+            <SEO title="Recruting Lists" />
+       
             <main className="main-wrapper">
                 <HeaderOne />
                 <BreadCrumbOne 
