@@ -12,7 +12,7 @@ import FormTwo from '../component/contact/FormTwo';
 const Contact = () => {
     return (
         <>
-            <SEO title="Blog Grid" />
+            <SEO title="Application Form" />
             <ColorSwitcher />
             <main className="main-wrapper">
                 <HeaderOne />
