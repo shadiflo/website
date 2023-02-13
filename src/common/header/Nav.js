@@ -19,8 +19,8 @@ const Nav = () => {
                 <li className="menu-item-has-children">
                     <Link to="#">Services <FaAngleDown /></Link>
                     <ul className="axil-submenu">
-                        <li><Link to={process.env.PUBLIC_URL + "/service-one"}>Search Faceit Users </Link></li>
-                        <li><Link to={process.env.PUBLIC_URL + "/404"}>404 Page</Link></li>
+                        
+                        
                     </ul>
                 </li>
                {/* <li className="menu-item-has-children">
