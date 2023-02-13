@@ -11,7 +11,7 @@ const BannerTwo = () => {
                     <div className="col-lg-6">
                         <div className="banner-content">
                         <h1 className="title">Free Agents &amp; Teams Looking for.</h1>
-                            <Link to={process.env.PUBLIC_URL + "/applicationform"} className="axil-btn btn-fill-white btn-large">View List</Link>
+                            <Link to={process.env.PUBLIC_URL + "/service-details/design"} className="axil-btn btn-fill-white btn-large">View List</Link>
                         </div>
                     </div>
                 </div>
