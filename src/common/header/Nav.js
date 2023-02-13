@@ -15,10 +15,12 @@ const Nav = () => {
                       
                     </ul>
                 </li>
+                <li><Link to={process.env.PUBLIC_URL + "/service-details/design"}>Free Agents</Link></li>
                 <li className="menu-item-has-children">
                     <Link to="#">Services <FaAngleDown /></Link>
                     <ul className="axil-submenu">
                         <li><Link to={process.env.PUBLIC_URL + "/service-one"}>Search Faceit Users </Link></li>
+                        np
                 
                         <li><Link to={process.env.PUBLIC_URL + "/404"}>404 Page</Link></li>
                     </ul>
