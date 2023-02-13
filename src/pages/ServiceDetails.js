@@ -11,7 +11,6 @@ import ServiceData from "../data/service/ServiceMain.json";
 import ProjectData from "../data/project/ProjectData.json";
 import ProcessOne from '../component/process/ProcessOne';
 import AboutTwo from '../component/about/AboutTwo';
-import ColorSwitcher from '../elements/switcher/ColorSwitcher';
 import SEO from '../common/SEO';
 
 const allServiceData = ServiceData;
@@ -29,7 +28,7 @@ const ServiceDetails = () => {
     return (
         <>
         <SEO title="Service Details" />
-        <ColorSwitcher />
+        
         <main className="main-wrapper">
             <HeaderOne />
             <BcrumbBannerOne 

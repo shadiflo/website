@@ -20,8 +20,6 @@ const Nav = () => {
                     <Link to="#">Services <FaAngleDown /></Link>
                     <ul className="axil-submenu">
                         <li><Link to={process.env.PUBLIC_URL + "/service-one"}>Search Faceit Users </Link></li>
-                        np
-                
                         <li><Link to={process.env.PUBLIC_URL + "/404"}>404 Page</Link></li>
                     </ul>
                 </li>
@@ -72,10 +70,10 @@ const Nav = () => {
                 
                 <li><Link to={process.env.PUBLIC_URL + "/faceitvisuals"}>FACEIT Extension</Link></li>
                 <li className="menu-item-has-children">
-                    <Link to="#">CS:GO Tutorials <FaAngleDown /></Link>
-                    <ul className="axil-submenu">
-                <li><Link to={process.env.PUBLIC_URL + "/contact"}>CS:GO Binds</Link></li>
-                </ul>
+                    <Link to="#">CS:GO Tutorials </Link>
+                    
+                
+                
                 </li>
                 <li><Link to={process.env.PUBLIC_URL + "/contact"}>Contact</Link></li>
             </ul>
