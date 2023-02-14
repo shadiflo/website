@@ -23,7 +23,7 @@ const Nav = () => {
                         
                     </ul>
                 </li>
-               {/* <li className="menu-item-has-children">
+                <li className="menu-item-has-children">
                    	 <Link to="#">Teams <FaAngleDown /></Link>
                      
                     <ul className="axil-submenu">
@@ -35,9 +35,9 @@ const Nav = () => {
                         <li><Link to={process.env.PUBLIC_URL + "/project-details/plan-management"}>Portfolio Details</Link></li>
                     </ul>
                     
-                </li>*/}
+                </li>
                 
-              {/*  <li className="menu-item-has-children">
+                <li className="menu-item-has-children">
                     <Link to="#">Pages <FaAngleDown /></Link>
                     
                     <ul className="axil-submenu">
@@ -55,16 +55,16 @@ const Nav = () => {
                         <li><Link to={process.env.PUBLIC_URL + "/coming-soon"}>Coming Soon</Link></li>
                     </ul>
                     
-                </li>*/}
+                </li>
                 <li className="menu-item-has-children">
                     <Link to="#">Blog <FaAngleDown /></Link>
                     <ul className="axil-submenu">
-                      {/*   <li><Link to={process.env.PUBLIC_URL + "/blog-grid"}>Blogs</Link></li>
+                         <li><Link to={process.env.PUBLIC_URL + "/blog-grid"}>Blogs</Link></li>
                         <li><Link to={process.env.PUBLIC_URL + "/blog-details/1"}>Standard Post</Link></li>
                         <li><Link to={process.env.PUBLIC_URL + "/blog-details/2"}>Gallery Post</Link></li>
                         <li><Link to={process.env.PUBLIC_URL + "/blog-details/3"}>Video Post</Link></li>
                          <li><Link to={process.env.PUBLIC_URL + "#"}>Audio Post</Link></li>
-                        <li><Link to={process.env.PUBLIC_URL + "#"}>Quote Post</Link></li> */}
+                        <li><Link to={process.env.PUBLIC_URL + "#"}>Quote Post</Link></li> 
                     </ul>
                 </li>
                 
