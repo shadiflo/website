@@ -93,7 +93,7 @@ const BlogGridOne = () => {
                             <div className="popup-video">
                                 <button className="play-btn" onClick={ () => setToggler(!toggler) }><FaPlay /></button>
                             </div> 
-                            <FsLightbox toggler={ toggler } sources={ ['https://www.youtube.com/watch?v=1iIZeIy7TqM'] }/>
+                            <FsLightbox toggler={ toggler } sources={ ['https://twitter.com/NadesOutHere/status/1622611082274643968?s=20&t=IID-dSyZ8WBSQ5rAgqbSmw'] }/>
                         </> 
                         : ""
                         }  

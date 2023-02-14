@@ -1,6 +1,6 @@
 import React from 'react';
 import SEO from '../common/SEO';
-import ColorSwitcher from '../elements/switcher/ColorSwitcher';
+
 import { Link } from 'react-router-dom';
 import { FaEnvelopeOpen } from "react-icons/fa";
 import Countdown from 'react-countdown';
@@ -43,21 +43,20 @@ const ComingSoon = () => {
     return (
         <>
         <SEO title="Coming Soon" />
-        <ColorSwitcher />
+     
             <main className="main-wrapper">
                 <div className="coming-soon-area onepage-screen-area">
                     <div className="container">
                         <div className="row align-items-center justify-content-center">
                         <div className="col-12">
                             <div className="site-logo">
-                                <Link to={process.env.PUBLIC_URL + "/"} className="logo-light"><img src={process.env.PUBLIC_URL + "/images/logo-2.svg"} alt="Logo" /></Link>
-                                <Link to={process.env.PUBLIC_URL + "/"} className="logo-dark"><img src={process.env.PUBLIC_URL + "/images/logo-3.svg"} alt="Logo" /></Link>
+                                <Link to={process.env.PUBLIC_URL + "/"} className="logo-light"><img src={process.env.PUBLIC_URL + "/images/cb3.png"} alt="Logo" /></Link>
+                                <Link to={process.env.PUBLIC_URL + "/"} className="logo-dark"><img src={process.env.PUBLIC_URL + "/images/cb3.png"} alt="Logo" /></Link>
                             </div>
                         </div>
                         <div className="col-xl-6 col-lg-8">
                             <div className="content">
                             <h2 className="title">Our new website is on its way</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                             <Countdown date={SetCountdownTime} zeroPadTime={3} renderer={CountDownRender}></Countdown>
                             <form>
                                 <div className="input-group">
@@ -70,7 +69,7 @@ const ComingSoon = () => {
                         </div>
                         <div className="col-xl-6">
                             <div className="thumbnail">
-                                <img src={process.env.PUBLIC_URL + "/images/others/coming-soon.png"} alt="Coming Soon" />
+                                <img src={process.env.PUBLIC_URL + "/images/others/league1.png"} alt="Coming Soon" />
                             </div>
                         </div>
                         </div>

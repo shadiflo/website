@@ -8,7 +8,6 @@ import BreadCrumbOne from '../elements/breadcrumb/BreadCrumbOne';
 import BlogSidebar from '../component/blog/BlogSidebar';
 import BlogAuthor from '../component/blog/BlogAuthor';
 import Comment from '../component/blog/Comment';
-import ColorSwitcher from '../elements/switcher/ColorSwitcher';
 import SEO from '../common/SEO';
 import { FaPlay, FaAngleRight, FaAngleLeft } from "react-icons/fa";
 import FsLightbox from 'fslightbox-react';
@@ -57,7 +56,7 @@ const BlogDetails = () => {
     return (
         <>
             <SEO title={detailsBlog.title} />
-            <ColorSwitcher />
+       
             <main className="main-wrapper">
                 <HeaderOne />
                 <BreadCrumbOne 

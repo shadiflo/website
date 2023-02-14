@@ -7,7 +7,6 @@ import BlogGridTwo from '../component/blog/BlogGridTwo';
 import CtaLayoutOne from '../component/cta/CtaLayoutOne';
 import BlogData from "../data/blog/BlogData.json";
 import BreadCrumbOne from '../elements/breadcrumb/BreadCrumbOne';
-import ColorSwitcher from '../elements/switcher/ColorSwitcher';
 import {slugify} from '../utils';
 
 
@@ -26,7 +25,7 @@ const BlogArchive = () => {
     return (
         <>
         <SEO title={getBlogData[0].author_name} />
-        <ColorSwitcher />
+        
             <main className="main-wrapper">
                 <HeaderOne />
                 <BreadCrumbOne 

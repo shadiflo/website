@@ -59,7 +59,7 @@ const App = () => {
     <Router>
 		<ScrollToTop>
 			<Routes>
-				<Route path={process.env.PUBLIC_URL + "/"} element={<CreativeAgency />}/>
+				<Route path={process.env.PUBLIC_URL + "/"} element={<ComingSoon />}/>
 
 				<Route path={process.env.PUBLIC_URL + "/faceithubs"} element={<FaceitHubs />}/>
 				<Route path={process.env.PUBLIC_URL + "/creative-agency"} element={<CreativeAgency />}/>
