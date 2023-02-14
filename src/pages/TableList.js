@@ -5,7 +5,9 @@ const TableList = () => {
     return(
 
     <div className="mt-5">
-    <div className="home"></div>
+    <div className="home">
+      
+    </div>
     <div className="container">
       <div className="active-player">
          
