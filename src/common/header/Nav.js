@@ -16,14 +16,17 @@ const Nav = () => {
                     </ul>
                 </li>
                 <li><Link to={process.env.PUBLIC_URL + "/service-details/design"}>Free Agents</Link></li>
-                <li className="menu-item-has-children">
+                {/* <li className="menu-item-has-children">
                     <Link to="#">Services <FaAngleDown /></Link>
-                    <ul className="axil-submenu">
-                        
-                        
+                    <ul className="axil-submenu"> 
                     </ul>
+                        
+                        
+                   
+                    
                 </li>
-                <li className="menu-item-has-children">
+                */}
+               {/*  <li className="menu-item-has-children">
                    	 <Link to="#">Teams <FaAngleDown /></Link>
                      
                     <ul className="axil-submenu">
@@ -36,10 +39,10 @@ const Nav = () => {
                     </ul>
                     
                 </li>
-                
-                <li className="menu-item-has-children">
+                */}
+               {/*  <li className="menu-item-has-children">
                     <Link to="#">Pages <FaAngleDown /></Link>
-                    
+                   
                     <ul className="axil-submenu">
                         <li><Link to={process.env.PUBLIC_URL + "/about-us"}>About Us</Link></li>
                         <li><Link to={process.env.PUBLIC_URL + "/our-office"}>Our Office</Link></li>
@@ -55,7 +58,7 @@ const Nav = () => {
                         <li><Link to={process.env.PUBLIC_URL + "/coming-soon"}>Coming Soon</Link></li>
                     </ul>
                     
-                </li>
+                </li> */}
                 <li className="menu-item-has-children">
                     <Link to="#">Blog <FaAngleDown /></Link>
                     <ul className="axil-submenu">
@@ -70,7 +73,14 @@ const Nav = () => {
                 
                 <li><Link to={process.env.PUBLIC_URL + "/faceitvisuals"}>FACEIT Extension</Link></li>
                 <li className="menu-item-has-children">
-                    <Link to="#">CS:GO Tutorials </Link>
+                    <Link to="#">CS:GO Tutorials <FaAngleDown /></Link>
+                    <ul className="axil-submenu">
+
+                    <li><Link to={process.env.PUBLIC_URL + "/"}>Mirage</Link></li>
+
+
+
+                    </ul>
                     
                 
                 

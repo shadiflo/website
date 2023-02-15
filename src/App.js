@@ -52,6 +52,7 @@ import TermsOfUse from './pages/TermsOfUse';
 import './assets/scss/app.scss';
 // New pages
 import ApplicationForm from './pages/Applicationform'
+import MirageTips from './pages/Miragetips';
 
 
 const App = () => {
@@ -59,7 +60,7 @@ const App = () => {
     <Router>
 		<ScrollToTop>
 			<Routes>
-				<Route path={process.env.PUBLIC_URL + "/"} element={<ComingSoon />}/>
+				<Route path={process.env.PUBLIC_URL + "/"} element={<CreativeAgency/>}/>
 
 				<Route path={process.env.PUBLIC_URL + "/faceithubs"} element={<FaceitHubs />}/>
 				<Route path={process.env.PUBLIC_URL + "/creative-agency"} element={<CreativeAgency />}/>
@@ -103,6 +104,8 @@ const App = () => {
 				<Route path={process.env.PUBLIC_URL + "/coming-soon"} element={<ComingSoon />}/>
 				<Route path={process.env.PUBLIC_URL + "/privacy-policy"} element={<PrivacyPolicy />}/>
 				<Route path={process.env.PUBLIC_URL + "/terms-use"} element={<TermsOfUse />}/>
+               {/* Tutorials */}
+			   <Route path={process.env.PUBLIC_URL + "/miragetips"} element={<MirageTips />}/>
 
 			</Routes>
 		</ScrollToTop>
