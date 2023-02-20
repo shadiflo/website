@@ -16,17 +16,18 @@ const Nav = () => {
                       
                     </ul>
                 </li>
-                <li><Link to={process.env.PUBLIC_URL + "/service-details/design"}>Free Agents</Link></li>
-                {/* <li className="menu-item-has-children">
-                    <Link to="#">Services <FaAngleDown /></Link>
+                <li><Link to={process.env.PUBLIC_URL + "/freeagents"}>Free Agents</Link></li>
+                <li className="menu-item-has-children">
+                    <Link to="#">Resources<FaAngleDown /></Link>
                     <ul className="axil-submenu"> 
+                    <li><Link to={process.env.PUBLIC_URL + "/placestoplay"}>Places to play CS:GO</Link></li>
                     </ul>
                         
                         
                    
                     
                 </li>
-                */}
+                
                {/*  <li className="menu-item-has-children">
                    	 <Link to="#">Teams <FaAngleDown /></Link>
                      
@@ -87,7 +88,7 @@ const Nav = () => {
                 
                 </li>
                 <li><Link to={process.env.PUBLIC_URL + "/contact"}>Contact</Link></li>
-                <LoginButton/>
+              
             </ul>
             
            

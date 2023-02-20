@@ -1,8 +1,4 @@
 import React from 'react';
-import FormOne from '../contact/FormOne';
-import Accordion from 'react-bootstrap/Accordion';
-import { FaCompress, FaCode, FaGlobe } from 'react-icons/fa';
-import Table from 'react-bootstrap/Table';
 import ReactCountryFlag from "react-country-flag"
 import { Link } from 'react-router-dom';
 const AboutTwo = () => {

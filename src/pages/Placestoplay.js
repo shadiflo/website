@@ -8,11 +8,11 @@ import BannerCustom from '../elements/breadcrumb/BannerCustom';
 import Videos from '../component/about/Videos';
 import Layout from '../component/cta/Layout';
 
-const FaceitHubs = () => {
+const Placesto = () => {
 
     return (
         <>
-        <SEO title="Mirage Tips"/>
+        <SEO title="Places to play "/>
      
         <main className="main-wrapper">
             <HeaderOne />
@@ -29,5 +29,5 @@ const FaceitHubs = () => {
     )
 }
 
-export default FaceitHubs;
+export default Placesto;
 

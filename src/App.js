@@ -6,7 +6,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 // Home Pages Import
 import DigitalAgency from './pages/DigitalAgency';
-import CreativeAgency from './pages/CreativeAgency';
+import CreativeAgency from './pages/Home';
 import PersonalPortfolio from './pages/FaceitVisuals';
 import HomeStartup from './pages/HomeStartup';
 import CorporateAgency from './pages/CorporateAgency';
@@ -55,6 +55,7 @@ import ApplicationForm from './pages/Applicationform'
 import MirageTips from './pages/Miragetips';
 import ColumnGroupingTable from './pages/Freeagents';
 import LoginButton from '../src/components/LoginButton'
+import Placesto from './pages/Placestoplay';
 
 const App = () => {
   return (
@@ -65,7 +66,7 @@ const App = () => {
 				
 
 				<Route path={process.env.PUBLIC_URL + "/faceithubs"} element={<FaceitHubs />}/>
-				<Route path={process.env.PUBLIC_URL + "/creative-agency"} element={<CreativeAgency />}/>
+				<Route path={process.env.PUBLIC_URL + "/Home"} element={<CreativeAgency />}/>
 				<Route path={process.env.PUBLIC_URL + "/faceitvisuals"} element={<PersonalPortfolio />}/>
 				<Route path={process.env.PUBLIC_URL + "/home-startup"} element={<HomeStartup />}/>
 				<Route path={process.env.PUBLIC_URL + "/corporate-agency"} element={<CorporateAgency />}/>
@@ -110,6 +111,7 @@ const App = () => {
 			   <Route path={process.env.PUBLIC_URL + "/miragetips"} element={<MirageTips />}/>
 			   <Route path={process.env.PUBLIC_URL + "/freeagents"} element={<ColumnGroupingTable />}/>
 			   <Route path={process.env.PUBLIC_URL + "/loginbutton"} element={<ColumnGroupingTable />}/>
+			   <Route path={process.env.PUBLIC_URL + "/placestoplay"} element={<Placesto />}/>
 
 			</Routes>
 		</ScrollToTop>
