@@ -54,7 +54,7 @@ import './assets/scss/app.scss';
 import ApplicationForm from './pages/Applicationform'
 import MirageTips from './pages/Miragetips';
 import ColumnGroupingTable from './pages/Freeagents';
-
+import LoginButton from '../src/components/LoginButton'
 
 const App = () => {
   return (
@@ -62,6 +62,7 @@ const App = () => {
 		<ScrollToTop>
 			<Routes>
 				<Route path={process.env.PUBLIC_URL + "/"} element={<CreativeAgency/>}/>
+				
 
 				<Route path={process.env.PUBLIC_URL + "/faceithubs"} element={<FaceitHubs />}/>
 				<Route path={process.env.PUBLIC_URL + "/creative-agency"} element={<CreativeAgency />}/>
@@ -108,6 +109,7 @@ const App = () => {
                {/* Tutorials */}
 			   <Route path={process.env.PUBLIC_URL + "/miragetips"} element={<MirageTips />}/>
 			   <Route path={process.env.PUBLIC_URL + "/freeagents"} element={<ColumnGroupingTable />}/>
+			   <Route path={process.env.PUBLIC_URL + "/loginbutton"} element={<ColumnGroupingTable />}/>
 
 			</Routes>
 		</ScrollToTop>

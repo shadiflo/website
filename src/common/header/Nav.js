@@ -1,12 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { FaAngleDown } from "react-icons/fa";
-
+import LoginButton from '../../components/LoginButton';
 
 const Nav = () => {
     return (
         <nav className="mainmenu-nav">
             <ul className="mainmenu">
+            
                 <li className="menu-item-has-children">
                 <Link to="#">ClanBase <FaAngleDown /></Link>
                     <ul className="axil-submenu">
@@ -86,7 +87,10 @@ const Nav = () => {
                 
                 </li>
                 <li><Link to={process.env.PUBLIC_URL + "/contact"}>Contact</Link></li>
+                <LoginButton/>
             </ul>
+            
+           
         </nav>
     )
 }
