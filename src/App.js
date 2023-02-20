@@ -53,6 +53,7 @@ import './assets/scss/app.scss';
 // New pages
 import ApplicationForm from './pages/Applicationform'
 import MirageTips from './pages/Miragetips';
+import ColumnGroupingTable from './pages/Freeagents';
 
 
 const App = () => {
@@ -60,7 +61,7 @@ const App = () => {
     <Router>
 		<ScrollToTop>
 			<Routes>
-				<Route path={process.env.PUBLIC_URL + "/"} element={<ComingSoon/>}/>
+				<Route path={process.env.PUBLIC_URL + "/"} element={<CreativeAgency/>}/>
 
 				<Route path={process.env.PUBLIC_URL + "/faceithubs"} element={<FaceitHubs />}/>
 				<Route path={process.env.PUBLIC_URL + "/creative-agency"} element={<CreativeAgency />}/>
@@ -106,6 +107,7 @@ const App = () => {
 				<Route path={process.env.PUBLIC_URL + "/terms-use"} element={<TermsOfUse />}/>
                {/* Tutorials */}
 			   <Route path={process.env.PUBLIC_URL + "/miragetips"} element={<MirageTips />}/>
+			   <Route path={process.env.PUBLIC_URL + "/freeagents"} element={<ColumnGroupingTable />}/>
 
 			</Routes>
 		</ScrollToTop>

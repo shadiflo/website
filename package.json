@@ -5,6 +5,10 @@
   "private": false,
   "dependencies": {
     "@emailjs/browser": "^3.4.0",
+    "@emotion/react": "^11.10.5",
+    "@emotion/styled": "^11.10.5",
+    "@mui/material": "^5.11.9",
+    "@mui/x-data-grid": "^5.17.23",
     "@testing-library/jest-dom": "^5.16.1",
     "@testing-library/react": "^12.1.2",
     "@testing-library/user-event": "^13.5.0",

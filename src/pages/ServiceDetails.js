@@ -12,6 +12,7 @@ import ProjectData from "../data/project/ProjectData.json";
 import ProcessOne from '../component/process/ProcessOne';
 import AboutTwo from '../component/about/AboutTwo';
 import SEO from '../common/SEO';
+import DataTable from './Freeagents';
 
 const allServiceData = ServiceData;
 const getProjectData = ProjectData;

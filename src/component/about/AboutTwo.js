@@ -18,15 +18,24 @@ const AboutTwo = () => {
       <table class="table mt-5">
         <thead>
           <tr>
-            <th scope="col" className="text-center">
+            <th scope="col" className="text-left">
               Player Name
             </th>
             <th scope="col" className="text-center">
-              email
+              contact
+            </th>
+            <th scope="col" className="text-center">
+              hltv
+            </th>
+            <th scope="col" className="text-center">
+              twitter
             </th>
           </tr>
         </thead>
-        
+        <tbody>
+        <th>shadi</th>
+          
+          </tbody>
       </table>
     </div>
     <div className="container">

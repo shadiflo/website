@@ -4,7 +4,6 @@ import HeaderOne from '../common/header/HeaderOne';
 import SEO from '../common/SEO';
 import BreadCrumbOne from '../elements/breadcrumb/BreadCrumbOne';
 import CtaLayoutOne from '../component/cta/CtaLayoutOne';
-import ColorSwitcher from '../elements/switcher/ColorSwitcher';
 import SectionTitle from '../elements/section-title/SectionTitle';
 import PricingOne from '../component/pricing/PricingOne';
 import FaqOne from '../component/faq/FaqOne';
@@ -15,7 +14,7 @@ const PricingTable = () => {
     return (
         <>
         <SEO title="Pricing Table" />
-        <ColorSwitcher />
+       
             <main className="main-wrapper">
                 <HeaderOne />
                 <BreadCrumbOne 

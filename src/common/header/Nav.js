@@ -76,7 +76,7 @@ const Nav = () => {
                     <Link to="#">CS:GO Tutorials <FaAngleDown /></Link>
                     <ul className="axil-submenu">
 
-                    <li><Link to={process.env.PUBLIC_URL + "/"}>Mirage</Link></li>
+                    <li><Link to={process.env.PUBLIC_URL + "/miragetips"}>Mirage</Link></li>
 
 
 
