@@ -18,7 +18,7 @@ const FaceitHubs = () => {
             <HeaderOne />
             <BannerCustom
            />
-            <Videos />
+            <Videos   />
            
           
       

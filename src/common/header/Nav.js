@@ -17,6 +17,7 @@ const Nav = () => {
                     </ul>
                 </li>
                 <li><Link to={process.env.PUBLIC_URL + "/freeagents"}>Free Agents</Link></li>
+
                 <li className="menu-item-has-children">
                     <Link to="#">Resources<FaAngleDown /></Link>
                     <ul className="axil-submenu"> 
@@ -61,7 +62,7 @@ const Nav = () => {
                     </ul>
                     
                 </li> */}
-                <li className="menu-item-has-children">
+               {/* <li className="menu-item-has-children">
                     <Link to="#">Blog <FaAngleDown /></Link>
                     <ul className="axil-submenu">
                          <li><Link to={process.env.PUBLIC_URL + "/blog-grid"}>Blogs</Link></li>
@@ -72,6 +73,7 @@ const Nav = () => {
                         <li><Link to={process.env.PUBLIC_URL + "#"}>Quote Post</Link></li> 
                     </ul>
                 </li>
+                */}
                 
                 <li><Link to={process.env.PUBLIC_URL + "/faceitvisuals"}>FACEIT Extension</Link></li>
                 <li className="menu-item-has-children">
@@ -87,8 +89,9 @@ const Nav = () => {
                 
                 
                 </li>
+                 {/*
                 <li><Link to={process.env.PUBLIC_URL + "/contact"}>Contact</Link></li>
-              
+            */}
             </ul>
             
            

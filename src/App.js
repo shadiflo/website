@@ -57,6 +57,8 @@ import ColumnGroupingTable from './pages/Freeagents';
 import LoginButton from '../src/components/LoginButton'
 import Placesto from './pages/Placestoplay';
 
+
+
 const App = () => {
   return (
     <Router>
@@ -112,6 +114,8 @@ const App = () => {
 			   <Route path={process.env.PUBLIC_URL + "/freeagents"} element={<ColumnGroupingTable />}/>
 			   <Route path={process.env.PUBLIC_URL + "/loginbutton"} element={<ColumnGroupingTable />}/>
 			   <Route path={process.env.PUBLIC_URL + "/placestoplay"} element={<Placesto />}/>
+			   
+			
 
 			</Routes>
 		</ScrollToTop>

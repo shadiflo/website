@@ -5,8 +5,8 @@ import FooterOne from '../common/footer/FooterOne';
 
 
 import BannerCustom from '../elements/breadcrumb/BannerCustom';
-import Videos from '../component/about/Videos';
-import Layout from '../component/cta/Layout';
+
+import Places from '../component/about/AboutPlaces';
 
 const Placesto = () => {
 
@@ -18,7 +18,7 @@ const Placesto = () => {
             <HeaderOne />
             <BannerCustom
            />
-            <Videos />
+            <Places/>
            
           
       
