@@ -4,7 +4,6 @@
   "homepage": "http://clanbase.ovh",
   "private": false,
   "dependencies": {
-    "@auth0/auth0-react": "^2.0.0",
     "@emailjs/browser": "^3.4.0",
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
