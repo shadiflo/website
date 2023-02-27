@@ -5,7 +5,7 @@ const Logout = () => {
     const navigate = useNavigate();
     // const { token } = useParams();
     const logOut = async () => {
-        const response = await fetch("http://localhost:5000/api/logout", {
+        const response = await fetch("http://localhost:3000/api/logout", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",

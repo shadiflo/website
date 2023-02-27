@@ -46,9 +46,7 @@ import ErrorPage from "./pages/404";
 import ComingSoon from "./pages/ComingSoon";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsOfUse from "./pages/TermsOfUse";
-import Login from "./pages/Login";
-import Register from "./pages/Register";
-import UpdateProfile from "./components/UpdateProfile";
+
 
 // Css Import
 import "./assets/scss/app.scss";
@@ -59,6 +57,9 @@ import ColumnGroupingTable from "./pages/Freeagents";
 import Placesto from "./pages/Placestoplay";
 import { AppProvider } from "./component/context/GlobalContext";
 import Logout from "./pages/Logout";
+import Login from "./pages/Login"
+import Register from "./pages/Register"
+import UpdateProfile from "./components/UpdateProfile.js"
 
 const App = () => {
     return (

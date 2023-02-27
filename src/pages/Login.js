@@ -4,7 +4,6 @@ import ColorSwitcher from "../elements/switcher/ColorSwitcher";
 import FooterOne from "../common/footer/FooterOne";
 import HeaderOne from "../common/header/HeaderOne";
 import BreadCrumbOne from "../elements/breadcrumb/BreadCrumbOne";
-import FormTwo from "../component/contact/FormTwo";
 import { useGlobalContext } from "../component/context/GlobalContext";
 import { useNavigate } from "react-router-dom";
 const Login = () => {
@@ -22,7 +21,7 @@ const Login = () => {
     const loginUser = async (e) => {
         e.preventDefault();
 
-        const response = await fetch("http://localhost:5000/api/login", {
+        const response = await fetch("http://localhost:3000/api/login", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",

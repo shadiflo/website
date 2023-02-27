@@ -30,7 +30,7 @@ const UpdateProfile = () => {
         let selected = document.querySelector("#status");
         let value = selected.options[selected.selectedIndex].value;
         credentials.status = value;
-        const response = await fetch(`http://localhost:5000/api/updateuser`, {
+        const response = await fetch(`http://localhost:3000/api/updateuser`, {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json",
@@ -146,7 +146,7 @@ const UpdateProfile = () => {
                                                     value="inactive"
                                                     className="form-control"
                                                 >
-                                                    In active
+                                                    Inactive
                                                 </option>
                                             </select>
                                         </div>

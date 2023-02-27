@@ -1,13 +1,13 @@
 import React, { useContext, useState } from "react";
 const AppContext = React.createContext();
-const url = "http://localhost:5000/api";
+const url = "http://localhost:3000/api";
 
 const AppProvider = ({ children }) => {
     const [users, setUsers] = useState([]);
     const [User, setUser] = useState();
     const loadList = async () => {
         const response = await fetch(
-            `http://localhost:5000/api/admin/getallusers`,
+            `http://localhost:3000/api/admin/getallusers`,
             {
                 method: "GET",
                 headers: {
@@ -21,7 +21,7 @@ const AppProvider = ({ children }) => {
     };
 
     const getLoggedInUser = async (token) => {
-        const response = await fetch(`http://localhost:5000/api/getuser`, {
+        const response = await fetch(`http://localhost:3000/api/getuser`, {
             method: "GET",
             headers: {
                 "Content-Type": "application/json",
