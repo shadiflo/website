@@ -1,14 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Offcanvas from "react-bootstrap/Offcanvas";
-import {
-    FaFacebookF,
-    FaTwitter,
-    FaLinkedinIn,
-    FaBehance,
-    FaPhone,
-    FaFax,
-} from "react-icons/fa";
+
 
 const OffcanvasMenu = ({ offcanvasShow, offcanvasHide }) => {
     const token = localStorage.getItem("token");
