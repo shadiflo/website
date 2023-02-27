@@ -1,9 +1,11 @@
 import React from 'react';
 import { AnimationOnScroll } from 'react-animation-on-scroll';
 import { Link } from 'react-router-dom';
+import { useGlobalContext } from '../context/GlobalContext';
 
 
 const BannerTwo = () => {
+    const {loadList} = useGlobalContext();
     return (
         <div className="banner banner-style-2">
             <div className="container-fluid">
@@ -11,7 +13,7 @@ const BannerTwo = () => {
                     <div className="col-lg-6">
                         <div className="banner-content">
                         <h1 className="title">Free Agents &amp; Teams Looking for.</h1>
-                            <Link to={process.env.PUBLIC_URL + "/freeagents"} className="axil-btn btn-fill-white btn-large">View List</Link>
+                            <Link onClick={loadList} to={process.env.PUBLIC_URL + "/freeagents"} className="axil-btn btn-fill-white btn-large">View List</Link>
                         </div>
                     </div>
                 </div>

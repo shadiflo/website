@@ -1,35 +1,73 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import { FaAngleDown } from "react-icons/fa";
-import LoginButton from '../../components/LoginButton';
+
 
 const Nav = () => {
+    const [show, setShow] = useState(false);
+    const { token } = document.cookie;
+    if (token) setShow(true);
     return (
         <nav className="mainmenu-nav">
             <ul className="mainmenu">
-            
                 <li className="menu-item-has-children">
-                <Link to="#">ClanBase <FaAngleDown /></Link>
+                    <Link to="/">
+                        ClanBase <FaAngleDown />
+                    </Link>
                     <ul className="axil-submenu">
-                        <li><Link to={process.env.PUBLIC_URL + "/faceithubs"}>Faceit Hubs</Link></li>
-                        <li><Link to={process.env.PUBLIC_URL + "/faceitvisuals"}>Faceit Extension</Link></li>
-                      
+                        <li>
+                            <Link to={process.env.PUBLIC_URL + "/faceithubs"}>
+                                Faceit Hubs
+                            </Link>
+                        </li>
+                        <li>
+                            <Link
+                                to={process.env.PUBLIC_URL + "/faceitvisuals"}
+                            >
+                                Faceit Extension
+                            </Link>
+                        </li>
+                        {localStorage.getItem("auth-token") == "null" ? (
+                            <li>
+                                <Link to={process.env.PUBLIC_URL + "/login"}>
+                                    Login
+                                </Link>
+                            </li>
+                        ) : (
+                            ""
+                        )}
+                        {localStorage.getItem("auth-token") == "null" ? (
+                            <li>
+                                <Link to={process.env.PUBLIC_URL + "/register"}>
+                                    Signup
+                                </Link>
+                            </li>
+                        ) : (
+                            ""
+                        )}
                     </ul>
                 </li>
-                <li><Link to={process.env.PUBLIC_URL + "/freeagents"}>Free Agents</Link></li>
+                <li>
+                    <Link to={process.env.PUBLIC_URL + "/freeagents"}>
+                        Free Agents
+                    </Link>
+                </li>
 
                 <li className="menu-item-has-children">
-                    <Link to="#">Resources<FaAngleDown /></Link>
-                    <ul className="axil-submenu"> 
-                    <li><Link to={process.env.PUBLIC_URL + "/placestoplay"}>Places to play CS:GO</Link></li>
+                    <Link to="#">
+                        Resources
+                        <FaAngleDown />
+                    </Link>
+                    <ul className="axil-submenu">
+                        <li>
+                            <Link to={process.env.PUBLIC_URL + "/placestoplay"}>
+                                Places to play CS:GO
+                            </Link>
+                        </li>
                     </ul>
-                        
-                        
-                   
-                    
                 </li>
-                
-               {/*  <li className="menu-item-has-children">
+
+                {/*  <li className="menu-item-has-children">
                    	 <Link to="#">Teams <FaAngleDown /></Link>
                      
                     <ul className="axil-submenu">
@@ -43,7 +81,7 @@ const Nav = () => {
                     
                 </li>
                 */}
-               {/*  <li className="menu-item-has-children">
+                {/*  <li className="menu-item-has-children">
                     <Link to="#">Pages <FaAngleDown /></Link>
                    
                     <ul className="axil-submenu">
@@ -62,7 +100,7 @@ const Nav = () => {
                     </ul>
                     
                 </li> */}
-               {/* <li className="menu-item-has-children">
+                {/* <li className="menu-item-has-children">
                     <Link to="#">Blog <FaAngleDown /></Link>
                     <ul className="axil-submenu">
                          <li><Link to={process.env.PUBLIC_URL + "/blog-grid"}>Blogs</Link></li>
@@ -74,29 +112,30 @@ const Nav = () => {
                     </ul>
                 </li>
                 */}
-                
-                <li><Link to={process.env.PUBLIC_URL + "/faceitvisuals"}>FACEIT Extension</Link></li>
-                <li className="menu-item-has-children">
-                    <Link to="#">CS:GO Tutorials <FaAngleDown /></Link>
-                    <ul className="axil-submenu">
 
-                    <li><Link to={process.env.PUBLIC_URL + "/miragetips"}>Mirage</Link></li>
-
-
-
-                    </ul>
-                    
-                
-                
+                <li>
+                    <Link to={process.env.PUBLIC_URL + "/faceitvisuals"}>
+                        FACEIT Extension
+                    </Link>
                 </li>
-                 {/*
+                <li className="menu-item-has-children">
+                    <Link to="#">
+                        CS:GO Tutorials <FaAngleDown />
+                    </Link>
+                    <ul className="axil-submenu">
+                        <li>
+                            <Link to={process.env.PUBLIC_URL + "/miragetips"}>
+                                Mirage
+                            </Link>
+                        </li>
+                    </ul>
+                </li>
+                {/*
                 <li><Link to={process.env.PUBLIC_URL + "/contact"}>Contact</Link></li>
             */}
             </ul>
-            
-           
         </nav>
-    )
-}
+    );
+};
 
 export default Nav;

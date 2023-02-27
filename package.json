@@ -1,9 +1,9 @@
 {
   "name": "react-app",
   "version": "0.1.0",
-  "homepage": "http://clanbase.ovh",
   "private": false,
   "dependencies": {
+    "@auth0/auth0-react": "^2.0.1",
     "@emailjs/browser": "^3.4.0",
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",

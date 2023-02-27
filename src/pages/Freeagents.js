@@ -32,8 +32,6 @@ const ServiceDetails = () => {
             <BannerCustom
            />
             <AboutTwo />
-           
-          
             <CtaLayoutOne />
         <FooterOne parentClass="" />
         </main>
