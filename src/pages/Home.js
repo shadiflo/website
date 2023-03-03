@@ -1,10 +1,23 @@
-import React from "react";
+import React, { useEffect } from "react";
 import FooterOne from "../common/footer/FooterOne";
 import HeaderTwo from "../common/header/HeaderTwo";
 import SEO from "../common/SEO";
 import BannerTwo from "../component/banner/BannerTwo";
+import { useGlobalContext } from "../component/context/GlobalContext";
 
 const CreativeAgency = () => {
+    const { showAlert, getRequests } = useGlobalContext();
+
+    useEffect(() => {
+        if (localStorage.getItem("login") === "true") {
+            showAlert("login successful", "success");
+            localStorage.setItem("login", "false");
+        }
+        if (localStorage.getItem("auth-token") !== "null") {
+            getRequests();
+        }
+    }, []);
+
     return (
         <>
             <SEO title="Home" />

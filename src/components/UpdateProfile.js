@@ -15,9 +15,9 @@ const UpdateProfile = () => {
     if (token === "null") {
         navigate("/login");
     }
-    const { User, getLoggedInUser } = useGlobalContext();
+    const { User, getLoggedInUser,showAlert } = useGlobalContext();
     const [credentials, SetCredentials] = useState({
-        username:"",
+        username: "",
         twitter: "",
         hltv: "",
         faceit: "",
@@ -30,7 +30,7 @@ const UpdateProfile = () => {
         let selected = document.querySelector("#status");
         let value = selected.options[selected.selectedIndex].value;
         credentials.status = value;
-        const response = await fetch(`http://localhost:3000/api/updateuser`, {
+        const response = await fetch(`http://localhost:5000/api/updateuser`, {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json",
@@ -40,7 +40,7 @@ const UpdateProfile = () => {
         });
         const data = await response.json();
         if (data.success) {
-            alert("data updated");
+            showAlert("account updated successfully",'success');
             navigate("/");
             SetCredentials({
                 username: "",
@@ -58,12 +58,16 @@ const UpdateProfile = () => {
     };
     useEffect(() => {
         getLoggedInUser();
+        if (localStorage.getItem("signup") == "true") {
+            showAlert("signup successful and you are logged in", "success");
+            localStorage.setItem("signup", "false");
+        }
     }, []);
     return !User ? (
         ""
     ) : (
         <>
-            <SEO title="Blog Grid" />
+            <SEO title="Update Profile" />
             <ColorSwitcher />
             <main className="main-wrapper">
                 <HeaderOne />
@@ -86,7 +90,7 @@ const UpdateProfile = () => {
                                                 type="text"
                                                 className="form-control"
                                                 name="username"
-                                                value={ credentials.username}
+                                                value={credentials.username}
                                                 onChange={onChange}
                                             />
                                         </div>
@@ -96,7 +100,7 @@ const UpdateProfile = () => {
                                                 type="text"
                                                 className="form-control"
                                                 name="country"
-                                                value={ credentials.country}
+                                                value={credentials.country}
                                                 onChange={onChange}
                                             />
                                         </div>
@@ -146,7 +150,7 @@ const UpdateProfile = () => {
                                                     value="inactive"
                                                     className="form-control"
                                                 >
-                                                    Inactive
+                                                    In active
                                                 </option>
                                             </select>
                                         </div>

@@ -2,15 +2,22 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { FaAngleDown } from "react-icons/fa";
 
-
 const Nav = () => {
     const [show, setShow] = useState(false);
     const { token } = document.cookie;
     if (token) setShow(true);
+
+    const requests = localStorage.getItem('requests');
     return (
         <nav className="mainmenu-nav">
             <ul className="mainmenu">
-                <li className="menu-item-has-children">
+                <li className="menu-item-has-children position-relative">
+                    { requests && requests !== "0" ? (
+                        <div className="notif-count position-absolute"></div>
+                    ) : (
+                        ""
+                    )}
+
                     <Link to="/">
                         ClanBase <FaAngleDown />
                     </Link>
@@ -26,6 +33,21 @@ const Nav = () => {
                             >
                                 Faceit Extension
                             </Link>
+                        </li>
+                        <li>
+                            <Link to={process.env.PUBLIC_URL + "/createteam"}>
+                                Create Team
+                            </Link>
+                        </li>
+                        <li>
+                            {localStorage.getItem("auth-token") !== "null" ? (
+                                <Link to={process.env.PUBLIC_URL + "/requests"}>
+                                    Requests{" "}
+                                    {`(${requests ? requests :"0"})`}
+                                </Link>
+                            ) : (
+                                ""
+                            )}
                         </li>
                         {localStorage.getItem("auth-token") == "null" ? (
                             <li>

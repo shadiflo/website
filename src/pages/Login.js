@@ -4,11 +4,13 @@ import ColorSwitcher from "../elements/switcher/ColorSwitcher";
 import FooterOne from "../common/footer/FooterOne";
 import HeaderOne from "../common/header/HeaderOne";
 import BreadCrumbOne from "../elements/breadcrumb/BreadCrumbOne";
+import FormTwo from "../component/contact/FormTwo";
 import { useGlobalContext } from "../component/context/GlobalContext";
 import { useNavigate } from "react-router-dom";
 const Login = () => {
     const navigate = useNavigate();
-    const { User, setUser } = useGlobalContext();
+    const { User, requests, getRequests, setUser, showAlert } =
+        useGlobalContext();
     const [credentials, setCredentials] = useState({
         username: "",
         password: "",
@@ -21,7 +23,7 @@ const Login = () => {
     const loginUser = async (e) => {
         e.preventDefault();
 
-        const response = await fetch("http://localhost:3000/api/login", {
+        const response = await fetch("https://clanbase.ovh/api/login", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -31,16 +33,17 @@ const Login = () => {
 
         const data = await response.json();
         if (data.success) {
-            alert("you have successfully logged in");
             localStorage.setItem("auth-token", data.token);
+            localStorage.setItem("login", "true");
             setCredentials({
                 username: "",
                 password: "",
             });
             setUser(data.user);
+            getRequests();
             navigate("/");
         } else {
-            alert(data.msg);
+            showAlert(data.msg, "error");
         }
     };
     useEffect(() => {
@@ -51,7 +54,7 @@ const Login = () => {
     }, []);
     return (
         <>
-            <SEO title="Blog Grid" />
+            <SEO title="Login" />
             <ColorSwitcher />
             <main className="main-wrapper">
                 <HeaderOne />

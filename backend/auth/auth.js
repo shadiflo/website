@@ -5,7 +5,6 @@ const key = process.env.SECRET_KEY;
 
 exports.isAuthenticated = PromiseErrors(async (req, res, next) => {
     const token = req.header("auth-token");
-    console.log(token);
     if (!token)
         return res.status(400).json({ msg: "Please Login", success: false });
     try {

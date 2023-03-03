@@ -6,7 +6,6 @@ import FooterOne from '../common/footer/FooterOne';
 
 import BannerCustom from '../elements/breadcrumb/BannerCustom';
 import Videos from '../component/about/Videos';
-import Layout from '../component/cta/Layout';
 
 const FaceitHubs = () => {
 

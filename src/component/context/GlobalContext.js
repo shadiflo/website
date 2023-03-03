@@ -1,13 +1,16 @@
 import React, { useContext, useState } from "react";
 const AppContext = React.createContext();
-const url = "http://localhost:3000/api";
+const url = "http://localhost:5000/api";
 
 const AppProvider = ({ children }) => {
     const [users, setUsers] = useState([]);
+    const [teams, setTeams] = useState([]);
     const [User, setUser] = useState();
+    const [userprofile, setUserprofile] = useState();
+    const [requests, setRequests] = useState();
     const loadList = async () => {
         const response = await fetch(
-            `http://localhost:3000/api/admin/getallusers`,
+            `http://localhost:5000/api/admin/getallusers`,
             {
                 method: "GET",
                 headers: {
@@ -16,23 +19,105 @@ const AppProvider = ({ children }) => {
             }
         );
         const data = await response.json();
-        setUsers(data.users);
-        console.log(data.users);
+        if (data.success) {
+            setUsers(data.users)
+        } else {
+            // todo
+        }
     };
 
-    const getLoggedInUser = async (token) => {
-        const response = await fetch(`http://localhost:3000/api/getuser`, {
+    const getLoggedInUser = async () => {
+        const response = await fetch(`http://localhost:5000/api/getuser`, {
             method: "GET",
             headers: {
                 "Content-Type": "application/json",
-                "auth-token": localStorage.getItem('auth-token'),
+                "auth-token": localStorage.getItem("auth-token"),
             },
         });
+
         const data = await response.json();
-        setUser(data.user);
-        console.log(data);
+        if (data.success) {
+            setUser(data.user);
+        } else {
+            // todo
+        }
+    };
+    const getUser = async (id) => {
+        const response = await fetch("http://localhost:5000/api/aboutuser", {
+            method: "GET",
+            headers: {
+                "Content-Type": "application/json",
+                'auth-token':localStorage.getItem('auth-token'),
+                id,
+            },
+        });
+
+        const data = await response.json();
+        if (data.success) {
+            setUserprofile(data.user);
+        } else {
+            // showAlert(data.msg,'error');
+        }
     };
 
+    const loadTeams = async () => {
+        const response = await fetch(`http://localhost:5000/teams/getallteams`, {
+            method: "GET",
+            headers: {
+                "Content-Type": "application/json",
+                "auth-token": localStorage.getItem("auth-token"),
+            },
+        });
+
+        const data = await response.json();
+        if (data.success) {
+            setTeams(data.teams);
+        } else {
+            // todo
+        }
+    };
+    const [message, setMessage] = useState("");
+    const [msg_type, setMsg_type] = useState("");
+    const showAlert = async (msg, type) => {
+        const Alert = document.querySelector(".alert");
+        Alert.style.display = "block";
+        setMessage(msg);
+        setMsg_type(type);
+        setTimeout(() => {
+            Alert.style.display = "none";
+
+            setMessage("");
+            setMsg_type("");
+        }, 2200);
+    };
+    const hideAlert = async (type, msg) => {
+        const Alert = document.querySelector(".alert");
+        Alert.style.display = "none";
+        setMessage("");
+        setMsg_type("");
+    };
+    const getRequests = async () => {
+        const response = await fetch(
+            "http://localhost:5000/teams/getallrequests",
+            {
+                method: "GET",
+                headers: {
+                    "Content-Type": "application/json",
+                    "auth-token": localStorage.getItem("auth-token"),
+                },
+            }
+        );
+
+        const data = await response.json();
+        if (data.success) {
+            setRequests(data.requests);
+            if(data.requests){
+                localStorage.setItem('requests',data.requests.length);
+            }
+        } else {
+            showAlert(data.msg, "error");
+        }
+    };
     return (
         <AppContext.Provider
             value={{
@@ -40,7 +125,21 @@ const AppProvider = ({ children }) => {
                 users,
                 User,
                 setUser,
+                loadTeams,
                 getLoggedInUser,
+                teams,
+                setTeams,
+                message,
+                setMessage,
+                msg_type,
+                setMsg_type,
+                hideAlert,
+                showAlert,
+                userprofile, setUserprofile,
+                getUser,
+                getRequests,
+                setRequests,
+                requests
             }}
         >
             {children}

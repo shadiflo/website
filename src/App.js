@@ -4,7 +4,6 @@ import ScrollToTop from "./component/scrollToTop/ScrollToTop";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 // Home Pages Import
-import DigitalAgency from "./pages/DigitalAgency";
 import CreativeAgency from "./pages/Home";
 import PersonalPortfolio from "./pages/FaceitVisuals";
 import HomeStartup from "./pages/HomeStartup";
@@ -46,7 +45,10 @@ import ErrorPage from "./pages/404";
 import ComingSoon from "./pages/ComingSoon";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsOfUse from "./pages/TermsOfUse";
-
+import Login from "./pages/Login";
+import Register from "./pages/Register";
+import UpdateProfile from "./components/UpdateProfile";
+import Alert from "./components/Alert";
 
 // Css Import
 import "./assets/scss/app.scss";
@@ -57,10 +59,10 @@ import ColumnGroupingTable from "./pages/Freeagents";
 import Placesto from "./pages/Placestoplay";
 import { AppProvider } from "./component/context/GlobalContext";
 import Logout from "./pages/Logout";
-import Login from "./pages/Login"
-import Register from "./pages/Register"
-import UpdateProfile from "./components/UpdateProfile.js"
-
+import CreateTeam from "./pages/CreateTeam";
+import JoinTeam from "./pages/JoinTeam";
+import Profile from "./pages/Profile";
+import TeamJoinRequest from "./pages/TeamJoinRequest";
 const App = () => {
     return (
         <AppProvider>
@@ -261,8 +263,25 @@ const App = () => {
                             path={process.env.PUBLIC_URL + "/logout"}
                             element={<Logout />}
                         />
+                        <Route
+                            path={process.env.PUBLIC_URL + "/createteam"}
+                            element={<CreateTeam />}
+                        />
+                        <Route
+                            path={process.env.PUBLIC_URL + "/jointeam/:id"}
+                            element={<JoinTeam />}
+                        />
+                        <Route
+                            path={process.env.PUBLIC_URL + "/profile/:id"}
+                            element={<Profile />}
+                        />
+                        <Route
+                            path={process.env.PUBLIC_URL + "/requests"}
+                            element={<TeamJoinRequest />}
+                    />
                     </Routes>
                 </ScrollToTop>
+                <Alert/>
             </Router>
         </AppProvider>
     );

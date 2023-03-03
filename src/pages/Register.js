@@ -9,7 +9,7 @@ import { Alert } from "bootstrap";
 import { useNavigate } from "react-router-dom";
 import { useGlobalContext } from "../component/context/GlobalContext";
 const Register = () => {
-    const { User, setUser } = useGlobalContext();
+    const { User, setUser,showAlert } = useGlobalContext();
     const [credentials, setCredentials] = useState({
         username: "",
         password: "",
@@ -23,13 +23,11 @@ const Register = () => {
 
     const registerUser = async (e) => {
         e.preventDefault();
-        const pass = credentials.password;
-        const cpass = credentials.cpassword;
         if (credentials.password !== credentials.cpassword) {
-            alert("both passwords should match");
+            showAlert("both passwords should match",'error');
             return;
         }
-        const response = await fetch("http://localhost:3000/api/register", {
+        const response = await fetch("https://clanbase.ovh/api/register", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -40,8 +38,8 @@ const Register = () => {
         const data = await response.json();
 
         if (data.success) {
-            alert("you have successfully created the account");
             localStorage.setItem("auth-token", data.token);
+            localStorage.setItem("signup", 'true');
             setCredentials({
                 username: "",
                 password: "",
@@ -51,7 +49,11 @@ const Register = () => {
             setUser(data.user);
             navigate("/updateprofile");
         }else{
-            alert(data.msg);
+            showAlert(data.msg,'error');
+            if (localStorage.getItem("signup") === "true") {
+                showAlert("signup successful and you are logged in", "success");
+                localStorage.setItem("signup", "false");
+            }
         }
     };
 
@@ -64,7 +66,7 @@ const Register = () => {
 
     return (
         <>
-            <SEO title="Blog Grid" />
+            <SEO title="ClanBase| Register" />
             <ColorSwitcher />
             <main className="main-wrapper">
                 <HeaderOne />

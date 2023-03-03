@@ -1,22 +1,25 @@
 import React, { useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
+import { useGlobalContext } from "../component/context/GlobalContext";
 
 const Logout = () => {
     const navigate = useNavigate();
+    const { showAlert } = useGlobalContext();
     // const { token } = useParams();
     const logOut = async () => {
-        const response = await fetch("http://localhost:3000/api/logout", {
+        const response = await fetch("https://clanbase.ovh/api/logout", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
                 "auth-token": localStorage.getItem("auth-token"),
             },
         });
-
+        
         const data = await response.json();
         if (data.success) {
-            alert("you have signed out in");
+            showAlert("sign out successful", "success");
             localStorage.setItem("auth-token", null);
+            localStorage.removeItem('requests');
             navigate("/login");
         }
     };

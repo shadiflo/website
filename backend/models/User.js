@@ -29,6 +29,7 @@ const UserSchema = mongoose.Schema({
         type: Boolean,
         default: false,
     },
+    teams_joined: [],
 });
 
 const User = mongoose.model("User", UserSchema);

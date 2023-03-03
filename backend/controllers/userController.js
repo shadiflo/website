@@ -63,7 +63,7 @@ exports.RegisterUser = PromiseErrors(async (req, res, next) => {
 
         res.status(200).json({
             success: true,
-            msg: "Account Created Successfully",
+            msg: "account created successfully",
             user,
             token,
         });
@@ -97,6 +97,7 @@ exports.updateUser = PromiseErrors(async (req, res, next) => {
         if (country != "") {
             user.country = country;
         }
+        console.log(status);
         if (status === "active") user.status = true;
         else user.status = false;
 
@@ -114,8 +115,6 @@ exports.LogoutUser = PromiseErrors(async (req, res, next) => {
         "-password"
     );
     if (user) {
-        user.status = false;
-        await user.save();
         return res
             .status(200)
             .json({ success: true, user, msg: "Logout Successfully" });
@@ -124,7 +123,7 @@ exports.LogoutUser = PromiseErrors(async (req, res, next) => {
     res.status(404).json({ success: true, msg: "user not found" });
 });
 
-// ? ROUTE__5 LOGOUT USER
+// ? ROUTE__5 LOGGED IN USER
 exports.getLoggedInUserInfo = PromiseErrors(async (req, res, next) => {
     const user = await User.findById({ _id: req.body.user }).select(
         "-password"
@@ -132,9 +131,20 @@ exports.getLoggedInUserInfo = PromiseErrors(async (req, res, next) => {
     res.json({ msg: "User Fetched Successfully", user, success: true });
 });
 
+// ? ROUTE__5 USER WITH THIS ID
+exports.getUserInfo = PromiseErrors(async (req, res, next) => {
+    const _id = req.header('id');
+    const user = await User.findById({ _id }).select(
+        "-password"
+    );
+    if(!user)
+        return res.status(400).json({ msg: "User Fetched Successfully", success: true });
+        
+    res.json({ msg: "User Fetched Successfully", user, success: true });
+});
+
 // ? ROUTE__ LOGOUT USER
 exports.getAllUsers = PromiseErrors(async (req, res, next) => {
     const users = await User.find({ status: true }).select("-password");
-
-    res.json({ msg: "All Users Fetched Successfully", users });
+    res.json({ success:true, msg: "All Users Fetched Successfully", users });
 });
