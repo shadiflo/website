@@ -3,6 +3,7 @@
 
 # production
 .env
+/env
 # dependencies
 /node_modules
 /.pnp
