@@ -16,6 +16,7 @@ jobs:
         password: ${{ secrets.SSH_PASSWORD}}
         exclude: |
                    **/src*/**
+                   **/backend/node_modules*/**
                    **/public*/**
                    **/.git*
                    **/.git*/**
