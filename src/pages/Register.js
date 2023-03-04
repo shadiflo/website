@@ -27,7 +27,7 @@ const Register = () => {
             showAlert("both passwords should match",'error');
             return;
         }
-        const response = await fetch("https://clanbase.ovh/api/register", {
+        const response = await fetch("http://localhost:5000/api/register", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",

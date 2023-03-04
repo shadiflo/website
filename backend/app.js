@@ -29,7 +29,7 @@ app.use("/api", require("./routes/userroutes"));
 app.use("/teams", require("./routes/teamroutes"));
 
 app.listen(PORT, () => {
-    console.log(`Server is running at https://clanbase.ovh/`);
+    console.log(`Server is running at http://localhost:${PORT}`);
 });
 // Unhandled Error
 process.on("unhandledRejection", (err) => {

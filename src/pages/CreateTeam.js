@@ -23,7 +23,7 @@ const CreateTeam = () => {
             team_manager_twitter,
         });
         console.log(json);
-        const response = await fetch("https://clanbase.ovh/teams/createteam", {
+        const response = await fetch("http://localhost:5000/teams/createteam", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",

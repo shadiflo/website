@@ -13,7 +13,7 @@ const TeamJoinRequest = () => {
     const acceptRequest = async (id) => {
         console.log(id);
 
-        const response = await fetch("https://clanbase.ovh/teams/requests", {
+        const response = await fetch("http://localhost:5000/teams/requests", {
             method: "GET",
             headers: {
                 "Content-Type": "application/json",
@@ -37,7 +37,7 @@ const TeamJoinRequest = () => {
     };
     const deleteRequest = async (id) => {
         console.log(id);
-        const response = await fetch("https://clanbase.ovh/teams/requests", {
+        const response = await fetch("http://localhost:5000/teams/requests", {
             method: "DELETE",
             headers: {
                 "Content-Type": "application/json",
@@ -80,7 +80,7 @@ const TeamJoinRequest = () => {
                             <div className="col-xl-12 col-lg-12">
                                 <div className="contact-form-box shadow-box mb--30">
                                     <h3 className="title center">
-                                        Team Requests 
+                                        Accept Them to Get the Best Players!
                                     </h3>
                                     <table className="table mt-5">
                                         <thead>

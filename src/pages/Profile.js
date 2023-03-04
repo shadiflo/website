@@ -10,7 +10,7 @@ const Profile = () => {
     const { id } = useParams();
     const [userp, setUserp] = useState();
     const getUser = async () => {
-        const response = await fetch("https://clanbase.ovh/api/aboutuser", {
+        const response = await fetch("http://localhost:5000/api/aboutuser", {
             method: "GET",
             headers: {
                 "Content-Type": "application/json",

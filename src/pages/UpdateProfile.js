@@ -27,7 +27,7 @@ const UpdateProfile = () => {
         let selected = document.querySelector("#status");
         let value = selected.options[selected.selectedIndex].value;
         credentials.status = value;
-        const response = await fetch(`https://clanbase.ovh/api/updateuser`, {
+        const response = await fetch(`http://localhost:5000/api/updateuser`, {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json",

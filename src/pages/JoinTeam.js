@@ -7,7 +7,6 @@ import BreadCrumbOne from "../elements/breadcrumb/BreadCrumbOne";
 import FormTwo from "../component/contact/FormTwo";
 import { useGlobalContext } from "../component/context/GlobalContext";
 import { useNavigate, useParams } from "react-router-dom";
-
 const JoinTeam = () => {
     const { id } = useParams();
     const navigate = useNavigate();
@@ -26,7 +25,7 @@ const JoinTeam = () => {
     const joinTeam = async (e) => {
         e.preventDefault();
 
-        const response = await fetch("https://clanbase.ovh/teams/jointeam", {
+        const response = await fetch("http://localhost:5000/teams/jointeam", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",

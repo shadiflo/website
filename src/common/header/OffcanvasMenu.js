@@ -54,13 +54,12 @@ const OffcanvasMenu = ({ offcanvasShow, offcanvasHide }) => {
                                 ""
                             )}
                            
-                           
-                           
-                           
                             
+                           
+                           
                         </ul>
                     </div>
-                    
+                   
                 </div>
             </Offcanvas.Body>
         </Offcanvas>

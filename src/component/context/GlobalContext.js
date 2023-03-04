@@ -1,6 +1,6 @@
 import React, { useContext, useState } from "react";
 const AppContext = React.createContext();
-const url = "https://clanbase.ovh/api";
+const url = "http://localhost:5000/api";
 
 const AppProvider = ({ children }) => {
     const [users, setUsers] = useState([]);
@@ -10,7 +10,7 @@ const AppProvider = ({ children }) => {
     const [requests, setRequests] = useState();
     const loadList = async () => {
         const response = await fetch(
-            `https://clanbase.ovh/api/admin/getallusers`,
+            `http://localhost:5000/api/admin/getallusers`,
             {
                 method: "GET",
                 headers: {
@@ -27,7 +27,7 @@ const AppProvider = ({ children }) => {
     };
 
     const getLoggedInUser = async () => {
-        const response = await fetch(`https://clanbase.ovh/api/getuser`, {
+        const response = await fetch(`http://localhost:5000/api/getuser`, {
             method: "GET",
             headers: {
                 "Content-Type": "application/json",
@@ -43,7 +43,7 @@ const AppProvider = ({ children }) => {
         }
     };
     const getUser = async (id) => {
-        const response = await fetch("https://clanbase.ovh/api/aboutuser", {
+        const response = await fetch("http://localhost:5000/api/aboutuser", {
             method: "GET",
             headers: {
                 "Content-Type": "application/json",
@@ -61,7 +61,7 @@ const AppProvider = ({ children }) => {
     };
 
     const loadTeams = async () => {
-        const response = await fetch(`https://clanbase.ovh/teams/getallteams`, {
+        const response = await fetch(`http://localhost:5000/teams/getallteams`, {
             method: "GET",
             headers: {
                 "Content-Type": "application/json",
@@ -98,7 +98,7 @@ const AppProvider = ({ children }) => {
     };
     const getRequests = async () => {
         const response = await fetch(
-            "https://clanbase.ovh/teams/getallrequests",
+            "http://localhost:5000/teams/getallrequests",
             {
                 method: "GET",
                 headers: {

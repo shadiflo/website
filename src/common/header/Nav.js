@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { FaAngleDown } from "react-icons/fa";
-import LoginButton from "../../components/LoginButton";
 
 const Nav = () => {
     const [show, setShow] = useState(false);
