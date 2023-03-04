@@ -7,7 +7,7 @@ const Logout = () => {
     const { showAlert } = useGlobalContext();
     // const { token } = useParams();
     const logOut = async () => {
-        const response = await fetch("https://clanbase.ovh/api/logout", {
+        const response = await fetch("http://localhost:5000/api/logout", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",

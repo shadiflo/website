@@ -59,7 +59,7 @@ const Register = () => {
 
     useEffect(() => {
         const token = localStorage.getItem("auth-token");
-        if (token != "null") {
+        if (token && token !== "null") {
             navigate("/");
         }
     }, []);

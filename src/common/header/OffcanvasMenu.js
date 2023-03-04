@@ -16,12 +16,22 @@ const OffcanvasMenu = ({ offcanvasShow, offcanvasHide }) => {
             <Offcanvas.Header closeButton></Offcanvas.Header>
             <Offcanvas.Body>
                 <form action="#" className="side-nav-search-form">
-                    
+                    <div className="form-group">
+                        <input
+                            type="text"
+                            className="search-field"
+                            name="search-field"
+                            placeholder="Search..."
+                        />
+                        <button className="side-nav-search-btn">
+                            <i className="fas fa-search"></i>
+                        </button>
+                    </div>
                 </form>
                 <div className="row ">
                     <div className="col-lg-5 col-xl-6">
                         <ul className="main-navigation list-unstyled">
-                            {localStorage.getItem("auth-token") != "null" ? (
+                            {localStorage.getItem("auth-token") && localStorage.getItem("auth-token") !== "null" ? (
                                 <li>
                                     <Link
                                         to={process.env.PUBLIC_URL + "/logout"}
@@ -32,7 +42,7 @@ const OffcanvasMenu = ({ offcanvasShow, offcanvasHide }) => {
                             ) : (
                                 ""
                             )}
-                            {localStorage.getItem("auth-token") != "null" ? (
+                            {localStorage.getItem("auth-token") && localStorage.getItem("auth-token") !== "null" ? (
                                 <li>
                                     <Link
                                         to={process.env.PUBLIC_URL + "/updateprofile"}
@@ -43,6 +53,10 @@ const OffcanvasMenu = ({ offcanvasShow, offcanvasHide }) => {
                             ) : (
                                 ""
                             )}
+                           
+                           
+                           
+                           
                             
                         </ul>
                     </div>

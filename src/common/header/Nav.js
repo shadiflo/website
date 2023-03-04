@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { FaAngleDown } from "react-icons/fa";
+import LoginButton from "../../components/LoginButton";
 
 const Nav = () => {
     const [show, setShow] = useState(false);
@@ -40,7 +41,7 @@ const Nav = () => {
                             </Link>
                         </li>
                         <li>
-                            {localStorage.getItem("auth-token") !== "null" ? (
+                            {!localStorage.getItem("auth-token")  || localStorage.getItem("auth-token") !== "null" ? (
                                 <Link to={process.env.PUBLIC_URL + "/requests"}>
                                     Requests{" "}
                                     {`(${requests ? requests :"0"})`}
@@ -49,7 +50,7 @@ const Nav = () => {
                                 ""
                             )}
                         </li>
-                        {localStorage.getItem("auth-token") == "null" ? (
+                        {!localStorage.getItem("auth-token")  || localStorage.getItem("auth-token") === "null" ? (
                             <li>
                                 <Link to={process.env.PUBLIC_URL + "/login"}>
                                     Login
@@ -58,7 +59,7 @@ const Nav = () => {
                         ) : (
                             ""
                         )}
-                        {localStorage.getItem("auth-token") == "null" ? (
+                        {!localStorage.getItem("auth-token") || localStorage.getItem("auth-token") === "null" ? (
                             <li>
                                 <Link to={process.env.PUBLIC_URL + "/register"}>
                                     Signup
