@@ -19,7 +19,7 @@ const ErrorPage = () => {
                         <AnimationOnScroll  animateIn="slideInUp" duration={1} delay={300} animateOnce={true}>
                             <div className="content">
                                 <h2 className="title">Page not found</h2>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore </p>
+                                <p> Error </p>
                                 <Link to={process.env.PUBLIC_URL + "/"} className="axil-btn btn-fill-primary">Go Back</Link>
                             </div>
                         </AnimationOnScroll>
