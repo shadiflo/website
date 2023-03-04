@@ -98,7 +98,7 @@ const AppProvider = ({ children }) => {
     };
     const getRequests = async () => {
         const response = await fetch(
-            "https://clanbase.ovh//teams/getallrequests",
+            "https://clanbase.ovh/teams/getallrequests",
             {
                 method: "GET",
                 headers: {
