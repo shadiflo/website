@@ -24,7 +24,7 @@ const ErrorPage = () => {
                             </div>
                         </AnimationOnScroll>
                         </div>
-                        <div className="col-lg-6">
+                        <div className="col-lg-6">02
                         <AnimationOnScroll  animateIn="zoomIn" duration={1} delay={300} animateOnce={true}>
                             <div className="thumbnail">
                                 <img src={process.env.PUBLIC_URL + "/images/others/404.png"} alt="404" />
